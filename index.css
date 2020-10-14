@@ -9,6 +9,11 @@
     text-decoration: none;
     color: var(--fC);
     font-family: "Montserrat";
+    /*errasse the "/**'/" for ghost elements
+    /background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+    */
 }
 
 /*variables*/
@@ -208,17 +213,17 @@ header .logo{
 
 /*position and margin, display of designs box*/
 .designsBox{
+    width: auto;
     display: flex;
-    flex: 25%;
     position: relative;
-    margin: 84px 0 84px 7%;
+    margin: 84px 138px 84px 138px;
 }
 
 /*position, size, filter of designs box*/
 .designs img{
     margin: 0 10px 0 10px;
     height: 550px;
-    width: 385px;
+    width: 387px;
     background-repeat: no-repeat;
     object-fit: cover;
     filter:var(--boxS);
@@ -236,7 +241,6 @@ header .logo{
     font-size: 35px;
     font-weight: 400;
     margin: -6% 0 0 20px;
-    padding-right: 40%;
     color: #ffffff;
 }
 

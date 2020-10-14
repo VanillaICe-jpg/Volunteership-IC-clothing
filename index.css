@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: var(--fC);
+    font-family: "Montserrat";
+}
+:root{
+--fC:#000000;
+
+}
+body{
+    background-color: #ffffff;
+}
+
+
+header{
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 70px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   transition: 0.6s;
+   z-index: 1;
+}
+
+header.sticky{
+    background-color: #fafafa;
+}
+
+header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li{
+    position: relative;
+    list-style: none;
+}
+
+header ul li a {
+    position: relative;
+    margin: 0 40px;
+    font-size: 26px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+header .logo{
+    padding: 0 100px;
+    cursor: pointer;
+}
+.banner{
+    width: 100%;
+    height: 75vh;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0)50%, rgb(255, 255, 255) 100%), url(imgs/pic1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+   position: relative;
+
+}
+
+.name{
+    text-align: center;
+    position: absolute;
+    font-family: "Merriweather";
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+}
+
+ .slogan{
+    text-align: center;
+    position: absolute;
+    font-family: "Merriweather";
+    top: 87%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+    color: rgb(0, 0, 0);
+}
+
+.arrow{
+    position: relative;
+    left: 48.5%;
+    width: 120px;
+    height: 120px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background: url(imgs/arrowR.png);
+    transform: rotate(90deg);
+}
+
+.boxes{
+    position: relative;
+    margin: 0 auto 0 auto;
+    line-height: 100px;
+    font-size: 60px;
+    font-family: "Montserrat";
+    font-weight: bold;
+    width: 85%;
+    height: 94px;
+    text-align: center;
+    background-color: #E4E0DB;
+}
+
+.group_images{
+    position: relative;
+    margin: 40px auto 100px auto;
+    width:  85%;
+    height: 80vh;
+    background:url(imgs/groupimgs.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.gimgsT{
+    font-weight: bold;
+    top: 50%;
+    left: 27.5%;
+    position: absolute;
+    line-height: 85px;
+    font-size: 80px;
+    font-family: "Montserrat";
+    color: #ffffff;
+}
+
+
+

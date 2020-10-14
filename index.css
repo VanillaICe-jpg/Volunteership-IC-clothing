@@ -9,6 +9,8 @@
 }
 :root{
 --fC:#000000;
+--nude:#E4E0DB;
+--boxS:brightness(75%);
 
 }
 body{
@@ -117,24 +119,112 @@ header .logo{
 }
 
 .group_images{
+    vertical-align: middle;
+    display: flex;
+    flex-wrap: wrap;
     position: relative;
     margin: 40px auto 100px auto;
     width:  85%;
     height: 80vh;
-    background:url(imgs/groupimgs.jpg); 
+    background-color: var(--nude);
     background-repeat: no-repeat;
-    background-size: cover;
+    
 }
 .gimgsT{
     font-weight: bold;
     top: 50%;
-    left: 27.5%;
+    left: 30%;
     position: absolute;
     line-height: 85px;
     font-size: 80px;
     font-family: "Montserrat";
     color: #ffffff;
+    transform: translate(-15%, -50%);
+}
+
+.column1{
+    
+    flex: 25%;
+    padding-right: 4px;
+    
+}
+
+.column2{
+    flex: 25%;
+    padding-left: 5px;
 }
 
 
+.column1 img:first-child{
+    padding-bottom: 8px;
+    max-height: 350px;
+    width: 100%;
+    object-fit: cover;
+    object-position: 0 70%;
+    filter: var(--boxS);
+}
+.column1 img:last-child{
+    width: 100%;
+    max-height: 445px;
+    object-fit: cover;
+    object-position: 0 72%;
+    filter:var(--boxS);
+}
 
+.column2 img:first-child{
+    padding-bottom: 8px;
+    width: 100%;
+    max-height: 445px;
+    object-fit: cover;
+    object-position: 0 62%;
+    filter:var(--boxS);
+}
+.column2 img:last-child{
+    max-height: 350px;
+    width: 100%;
+    object-fit: cover;
+    object-position: 0 66%;
+    filter:var(--boxS);
+    
+}
+
+.designsBox{
+    display: flex;
+    flex: 25%;
+    position: relative;
+    margin: 84px 0 84px 7%;
+}
+.designs img{
+    margin: 0 10px 0 10px;
+    height: 550px;
+    width: 385px;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    filter:var(--boxS);
+}
+
+.designs img:last-child{
+    object-position: 65% 0%;
+}
+
+.designs p{
+    position: absolute;
+    font-family: "Montserrat";
+    font-size: 35px;
+    font-weight: 400;
+    margin: -6% 0 0 20px;
+    padding-right: 40%;
+    color: #ffffff;
+
+}
+.colorBox{
+    vertical-align: middle;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin: 40px auto 100px auto;
+    width:  85%;
+    height: 90vh;
+    background-color: var(--nude);
+    background-repeat: no-repeat;
+}

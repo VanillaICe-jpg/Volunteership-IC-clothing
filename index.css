@@ -306,20 +306,24 @@ header .logo{
     object-position: 0 68%;
 }
 
-
+/*just display and content of footer "box" */
 .footer{
 display: flex;
 justify-content: space-between;
 }
+
+/*Text align of footer */
 .footerTextBox{
-position: relative;
 text-align: center;
 }
 
+/*brand name and privacity font size and spacing*/
 .footerInfo{
     font-size: 20px;
     letter-spacing: 2px;
 }
+
+/*privacity button font size, border, bacrkground, etc. */
 .footerInfo button{
     font-size: 20px;
     letter-spacing: 2px;
@@ -328,21 +332,26 @@ text-align: center;
     cursor: pointer;
 }
 
+/*Privacity hover color size,etc*/
 .footerInfo button:hover{
     font-size: 20px;
     letter-spacing: 2px;
     color: rgb(0, 153, 255);
 }
+
+/*location text size, margin */
 .location{
     font-size: 15px;
     margin: 10px 0 30px 0;
 }
 
+/*logo position */
 .logoft{
     padding: 0 100px;
     cursor: pointer;
 }
 
+/*socialmedia logos positions */
 .sclogos{
 margin: 0 100px 0 0;
 }

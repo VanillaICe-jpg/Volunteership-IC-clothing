@@ -2,28 +2,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
+/*variables*/
+:root{
+    --fC:#000000;
+    --nude:#E4E0DB;
+    --boxS:brightness(75%);
+}  
 /*Global base properties*/
 *{
     margin: 0;
     padding: 0;
     text-decoration: none;
-    color: var(--fC);
+    color: var(--fC,#000000);
     font-family: "Montserrat";
-    /*errasse the "/**'/" for ghost elements
-    /background: #000 !important;
-    color: #0f0 !important;
-    outline: solid #f00 1px !important;
-    */
+   /*ERRASE IN DEBUG */
+    /*background: #000 !important;*/
+    /*color: #0f0 !important;*/
+    /*outline: solid #f00 1px !important;*/
+    
 }
 
-/*variables*/
-:root{
---fC:#000000;
---nude:#E4E0DB;
---boxS:brightness(75%);
+
 
 /*background page color  */
-}
+
 body{
     background-color: #ffffff;
 }
@@ -62,11 +64,18 @@ header ul li{
 header ul li a {
     position: relative;
     margin: 0 40px;
-    font-size: 26px;
+    font-size: 2em;
     text-decoration: none;
     letter-spacing: 2px;
     font-weight: 400;
+    color: #ffffff;
+  
 }
+header.sticky ul li a{
+    color: #000000;
+    font-size: 2em;
+}
+
 
 /*navbar logo*/
 header .logo{
@@ -77,11 +86,11 @@ header .logo{
 /*Hero image, size, position, gradient*/
 .banner{
     width: 100%;
-    height: 75vh;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0)50%, rgb(255, 255, 255) 100%), url(imgs/pic1.jpg);
+    height: 91vh;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0)70%, rgb(255, 255, 255) 100%), url(imgs/pic1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: 0 86%;
    position: relative;
 
 }
@@ -94,7 +103,7 @@ header .logo{
     top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 50px;
+    font-size: 4em;
     color: rgb(0, 0, 0);
 }
 
@@ -106,7 +115,8 @@ header .logo{
     top: 87%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 22px;
+    font-size: 2rem;
+    margin-top: 10px;
     color: rgb(0, 0, 0);
 }
 
@@ -126,9 +136,9 @@ header .logo{
 /*Text between sections, position, color, size, font of box and text*/
 .boxes{
     position: relative;
-    margin: 0 auto 0 auto;
+    margin: 2% auto 3% auto;
     line-height: 100px;
-    font-size: 60px;
+    font-size: 4em;
     font-family: "Montserrat";
     font-weight: bold;
     width: 85%;
@@ -142,10 +152,10 @@ header .logo{
     vertical-align: middle;
     display: flex;
     position: relative;
-    margin: 40px auto 100px auto;
+    margin: auto auto auto auto;
     width:  85%;
     height: 80vh;
-    background-color: var(--nude);
+    background-color: var(--nude,#E4E0DB);
 }
 
 /*Text in the middle of collage box (size, color, position,etc.)*/
@@ -154,8 +164,7 @@ header .logo{
     top: 50%;
     left: 30%;
     position: absolute;
-    line-height: 85px;
-    font-size: 80px;
+    font-size: 6em;
     font-family: "Montserrat";
     color: #ffffff;
     transform: translate(-15%, -50%);
@@ -180,7 +189,7 @@ header .logo{
     width: 100%;
     object-fit: cover;
     object-position: 0 70%;
-    filter: var(--boxS);
+    filter: var(--boxS,75%);
 }
 /*size, padding, filter, fit Of bottom left picture*/
 .column1 img:last-child{
@@ -188,7 +197,7 @@ header .logo{
     max-height: 445px;
     object-fit: cover;
     object-position: 0 72%;
-    filter:var(--boxS);
+    filter:var(--boxS,75%);
 }
 
 /*size, padding, filter, fit Of top right picture*/
@@ -198,7 +207,7 @@ header .logo{
     max-height: 445px;
     object-fit: cover;
     object-position: 0 62%;
-    filter:var(--boxS);
+    filter:var(--boxS,75%);
 }
 
 /*size, padding, filter, fit Of bottom right picture*/
@@ -216,7 +225,7 @@ header .logo{
     width: auto;
     display: flex;
     position: relative;
-    margin: 84px 138px 84px 138px;
+    margin: 84px 138px 130px 138px;
 }
 
 /*position, size, filter of designs box*/
@@ -226,7 +235,7 @@ header .logo{
     width: 387px;
     background-repeat: no-repeat;
     object-fit: cover;
-    filter:var(--boxS);
+    filter:var(--boxS,75%);
 }
 
 /*object-position of last pictue*/
@@ -236,12 +245,19 @@ header .logo{
 
 /*Text position, size color,etc of designs section*/
 .designs p{
-    position: absolute;
+    display: flex;
+    position: relative;
     font-family: "Montserrat";
-    font-size: 35px;
+    font-size: 2.5em;
     font-weight: 400;
-    margin: -6% 0 0 20px;
     color: #ffffff;
+}
+.designTexs{
+    position: absolute;
+    display: flex;
+    flex-flow: column wrap;
+    margin: 0 0 0 1%;
+    top: 70%;
 }
 
 /*Color, size, position, etc of colors section */
@@ -252,7 +268,7 @@ header .logo{
     margin: 84px auto 100px auto;
     width:  85%;
     height: 90vh;
-    background-color: var(--nude);
+    background-color: var(--nude,#E4E0DB);
 }
 
 /*Size, position, align, etc "Text box"*/
@@ -307,7 +323,7 @@ header .logo{
 }
 
 /*just display and content of footer "box" */
-.footer{
+footer{
 display: flex;
 justify-content: space-between;
 }
@@ -355,3 +371,41 @@ text-align: center;
 .sclogos{
 margin: 0 100px 0 0;
 }
+
+/* Modal  */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }

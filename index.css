@@ -16,9 +16,9 @@
     color: var(--fC,#000000);
     font-family: "Montserrat";
    /*ERRASE IN DEBUG */
-    /*background: #000 !important;*/
-    /*color: #0f0 !important;*/
-    /*outline: solid #f00 1px !important;*/
+  background: #000 !important;
+   color: #0f0 !important;
+   outline: solid #f00 1px !important;
     
 }
 
@@ -34,7 +34,7 @@ body{
 header{
    position: fixed;
    width: 100%;
-   height: 70px;
+   height: 7vh;
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -58,28 +58,33 @@ header ul{
 header ul li{
     position: relative;
     list-style: none;
+    padding:  auto;
 }
 
 /*Position, size, font, color,etc of navbar options*/
 header ul li a {
+    display: flex;
+    align-items: center;
     position: relative;
-    margin: 0 40px;
-    font-size: 2em;
+    margin: 0 2.5vw;
+    font-size: 1.8vw;
     text-decoration: none;
-    letter-spacing: 2px;
-    font-weight: 400;
+    letter-spacing: .2vw;
     color: #ffffff;
   
 }
 header.sticky ul li a{
     color: #000000;
-    font-size: 2em;
+    font-size: 1.8vw;
 }
 
-
 /*navbar logo*/
-header .logo{
-    padding: 0 100px;
+header .logo img{
+    display: flex;
+    align-items: center;
+    width: 4.5vw;
+    height: 4.5vw;
+    margin:  0 0 0 4vw; 
     cursor: pointer;
 }
 
@@ -103,7 +108,7 @@ header .logo{
     top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 4em;
+    font-size: 6vh;
     color: rgb(0, 0, 0);
 }
 
@@ -115,44 +120,46 @@ header .logo{
     top: 87%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2rem;
-    margin-top: 10px;
+    font-size: 3vh;
+    margin-top: 1vh;
     color: rgb(0, 0, 0);
 }
 
 /*Just position and size of arrow*/
-.arrow{
+.arrow img{
     position: relative;
-    left: 48.5%;
-    width: 120px;
-    height: 120px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    background: url(imgs/arrowR.png);
+    left: 47%;
+    width: 6vw;
+    height: 6vw;
+    padding: auto;
     transform: rotate(90deg);
 }
 
 /*Text between sections, position, color, size, font of box and text*/
 .boxes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
-    margin: 2% auto 3% auto;
+    margin: 2vh auto 6vh auto;
     line-height: 100px;
-    font-size: 4em;
+    font-size: 4vw;
+    letter-spacing: 0.3vw;
     font-family: "Montserrat";
     font-weight: bold;
     width: 85%;
-    height: 94px;
+    height: 9vh;
     text-align: center;
     background-color: #E4E0DB;
 }
 
-/*Position of collage box, size, color,*/
+/*Position of collage BOX, size, color,*/
 .group_images{
-    vertical-align: middle;
     display: flex;
     position: relative;
-    margin: auto auto auto auto;
+    margin: auto;
+    margin-bottom: 10vh;
+    margin-top: 6vh;
     width:  85%;
     height: 80vh;
     background-color: var(--nude,#E4E0DB);
@@ -164,7 +171,7 @@ header .logo{
     top: 50%;
     left: 30%;
     position: absolute;
-    font-size: 6em;
+    font-size: 10vh;
     font-family: "Montserrat";
     color: #ffffff;
     transform: translate(-15%, -50%);
@@ -172,29 +179,30 @@ header .logo{
 
 /*Group of images left side (flex, padding)*/
 .column1{
-    flex: 25%;
-    padding-right: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 0.5vw;
 }
 
 /*Group of images right side (flex, padding)*/
 .column2{
-    flex: 25%;
-    padding-left: 5px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 /*size, padding, filter, fit Of top left picture*/
 .column1 img:first-child{
-    padding-bottom: 8px;
-    max-height: 350px;
-    width: 100%;
+    height: 34.8vh;
+    width: 41.8vw;
+    padding-bottom: 0.5vw;
     object-fit: cover;
     object-position: 0 70%;
     filter: var(--boxS,75%);
 }
 /*size, padding, filter, fit Of bottom left picture*/
 .column1 img:last-child{
-    width: 100%;
-    max-height: 445px;
+    width: 41.8vw;
+    height: 44.2vh;
     object-fit: cover;
     object-position: 0 72%;
     filter:var(--boxS,75%);
@@ -202,9 +210,9 @@ header .logo{
 
 /*size, padding, filter, fit Of top right picture*/
 .column2 img:first-child{
-    padding-bottom: 8px;
-    width: 100%;
-    max-height: 445px;
+    padding-bottom: 0.5vw;
+    width: 41.8vw;
+    height: 44.4vh;
     object-fit: cover;
     object-position: 0 62%;
     filter:var(--boxS,75%);
@@ -212,8 +220,8 @@ header .logo{
 
 /*size, padding, filter, fit Of bottom right picture*/
 .column2 img:last-child{
-    max-height: 350px;
-    width: 100%;
+    height: 34.6vh;
+    width: 41.8vw;
     object-fit: cover;
     object-position: 0 66%;
     filter:var(--boxS);
@@ -222,22 +230,27 @@ header .logo{
 
 /*position and margin, display of designs box*/
 .designsBox{
-    width: auto;
+    width: 80%;
     display: flex;
     position: relative;
-    margin: 84px 138px 130px 138px;
+    margin: auto;
+    margin-bottom: 6vh;
+    padding-top: 3vh;
+    padding-right: 5vw;
 }
 
 /*position, size, filter of designs box*/
 .designs img{
-    margin: 0 10px 0 10px;
-    height: 550px;
-    width: 387px;
-    background-repeat: no-repeat;
+    margin: 0 1vw 0 1vw;
+    height: 55vh;
+    width: 20.325vw;
     object-fit: cover;
     filter:var(--boxS,75%);
 }
 
+.designs img:first-child{
+    margin: 0 1vw 0 0;
+}
 /*object-position of last pictue*/
 .designs img:last-child{
     object-position: 65% 0%;
@@ -248,7 +261,7 @@ header .logo{
     display: flex;
     position: relative;
     font-family: "Montserrat";
-    font-size: 2.5em;
+    font-size: 4.2vh;
     font-weight: 400;
     color: #ffffff;
 }
@@ -265,7 +278,7 @@ header .logo{
     vertical-align: middle;
     display: flex;
     position: relative;
-    margin: 84px auto 100px auto;
+    margin: 0 auto 8vh auto;
     width:  85%;
     height: 90vh;
     background-color: var(--nude,#E4E0DB);
@@ -274,33 +287,38 @@ header .logo{
 /*Size, position, align, etc "Text box"*/
 .textColorS {
     text-align: center;
-    top: 87%;
-    left: 50%;
     position: absolute;
-    line-height: 85px;
+    top: 77vh;
+    left: 23vw;
+    line-height: 5vw;
     font-family: "Montserrat";
-    transform: translate(-50%, -50%);
+    
 }
 
 /*Size, paddind, Title text*/
 .cbTtile {
-    letter-spacing: 3px;
-    padding: 30px 0 0px 0;
-    font-size: 50px;
+    letter-spacing: .66vw;
+    font-size: 3vw;
    
 }
 
 /*Size, margin, small text*/
 .cbParag {
-    margin: -30px;
-    font-size: 25px;
+    margin: -6%;
+    font-size: 1.4vw;
+}
+
+.column2imgs{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
 }
 
 /*Size, paddind, pic position left side*/
 .column1imgs img{
-    padding: 30px 30px 30px 30px;
-    width: 778px;
-    height: 70vh;
+    padding: 4vh 1vw 3vh 2.8vw;
+    width: 38.5vw;
+    height: 72.3vh;
     object-fit: cover;
     object-position: 0 55%;
 }
@@ -308,9 +326,9 @@ header .logo{
 /*Size, paddind, pic position right side*/
 /*this one is focused on both*/
 .column2imgs img{
-    padding: 30px 30px 30px 0;
-    width: 750px;
-    height: 37%;
+    padding: 4vh 3vw 2vh 0;
+    width: 38.5vw;
+    height: 35.2vh;
     object-fit: cover;
     object-position: 0 66%;
 }
@@ -318,31 +336,36 @@ header .logo{
 /*Size, paddind, pic position. bottom right side picture*/
 /*focused on bottom rigth side*/
 .column2imgs img:last-child{
-    padding: 0 30px 30px 0;
+    padding: 0 0 0 0;
     object-position: 0 68%;
 }
 
 /*just display and content of footer "box" */
 footer{
-display: flex;
-justify-content: space-between;
+height: 9vh;
+display: flex;  
+justify-content: space-between; 
 }
 
 /*Text align of footer */
 .footerTextBox{
+position: relative;
 text-align: center;
+align-items: center;
+margin: 2vh;
 }
 
 /*brand name and privacity font size and spacing*/
 .footerInfo{
-    font-size: 20px;
-    letter-spacing: 2px;
+    font-size: 2vh;
+    letter-spacing: .3vw;
+    margin: auto;
 }
 
 /*privacity button font size, border, bacrkground, etc. */
 .footerInfo button{
-    font-size: 20px;
-    letter-spacing: 2px;
+    font-size: 2vh;
+    letter-spacing: 0.1vw;
     border: none;
     background-color: inherit;
     cursor: pointer;
@@ -350,26 +373,33 @@ text-align: center;
 
 /*Privacity hover color size,etc*/
 .footerInfo button:hover{
-    font-size: 20px;
-    letter-spacing: 2px;
+    font-size: 2vh;
+    letter-spacing: 0.1vw;
     color: rgb(0, 153, 255);
 }
 
 /*location text size, margin */
 .location{
-    font-size: 15px;
-    margin: 10px 0 30px 0;
+    font-size: 1.5vh;
+    margin: auto;
+    padding-top: 1vh;
 }
 
 /*logo position */
-.logoft{
-    padding: 0 100px;
+.logoft img{
+    display: flex;
+    align-items: center;
+    width: 4.5vw;
+    height: 4.5vw;
+    margin:  0 0 0 5vw; 
     cursor: pointer;
 }
 
 /*socialmedia logos positions */
-.sclogos{
-margin: 0 100px 0 0;
+.sclogos img{
+    width: 4vw;
+    height: 4vw; 
+    cursor: pointer;
 }
 
 /* Modal  */

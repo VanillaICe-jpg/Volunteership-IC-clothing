@@ -1,6 +1,3 @@
+add responsive
 
-CSS
-Usar unidades relativas.(em,ex,ch,rem,vw,vh,etc)
-em o rem para letras
-
-EVITAR PIXELES POR FAVOR
+add css to modal

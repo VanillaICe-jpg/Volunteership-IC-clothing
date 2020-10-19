@@ -22,10 +22,7 @@
     
 }
 
-
-
 /*background page color  */
-
 body{
     background-color: #ffffff;
 }
@@ -277,6 +274,7 @@ header .logo img{
 .colorBox{
     vertical-align: middle;
     display: flex;
+    flex-wrap: wrap;
     position: relative;
     margin: 0 auto 8vh auto;
     width:  85%;
@@ -284,13 +282,20 @@ header .logo img{
     background-color: var(--nude,#E4E0DB);
 }
 
+/*Columns of pictures in a BOX*/
+.columns{
+display: flex;
+flex-wrap: nowrap;
+}
+
 /*Size, position, align, etc "Text box"*/
 .textColorS {
-    text-align: center;
-    position: absolute;
-    top: 77vh;
-    left: 23vw;
-    line-height: 5vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: -2%;
+    align-items: center;
     font-family: "Montserrat";
     
 }
@@ -304,7 +309,6 @@ header .logo img{
 
 /*Size, margin, small text*/
 .cbParag {
-    margin: -6%;
     font-size: 1.4vw;
 }
 
@@ -316,7 +320,7 @@ header .logo img{
 
 /*Size, paddind, pic position left side*/
 .column1imgs img{
-    padding: 4vh 1vw 3vh 2.8vw;
+    padding: 4vh 1vw 0 2.8vw;
     width: 38.5vw;
     height: 72.3vh;
     object-fit: cover;
@@ -397,8 +401,8 @@ margin: 2vh;
 
 /*socialmedia logos positions */
 .sclogos img{
-    width: 4vw;
-    height: 4vw; 
+    width: 3vw;
+    height: 3vw; 
     cursor: pointer;
 }
 
@@ -418,7 +422,7 @@ margin: 2vh;
   
   /* Modal Content/Box */
   .modal-content {
-    background-color: #fefefe;
+    background-color: var(--nude,#E4E0DB);
     margin: 15% auto; 
     padding: 20px;
     border: 1px solid #888;

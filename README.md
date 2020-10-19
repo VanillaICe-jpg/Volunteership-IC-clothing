@@ -7,3 +7,5 @@ at master branch you'll find code and images
 10/15/2020 11:40am.- "Index finished, not responsive, only works on desktop"
 
 11:50am.- "comments at index.css added"
+
+10/18/2020.- "Zoom in/out bugs fixed"

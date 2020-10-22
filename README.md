@@ -9,3 +9,5 @@ at master branch you'll find code and images
 11:50am.- "comments at index.css added"
 
 10/18/2020.- "Zoom in/out bugs fixed"
+
+10/22/2020.- "not too much, lot of things to do"

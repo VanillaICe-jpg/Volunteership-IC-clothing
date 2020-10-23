@@ -462,7 +462,8 @@
         color: var(--fC,#000000);
         font-family: "Montserrat";
        /*ERRASE IN DEBUG */
-       /*background: #000 !important;
+       /*
+       background: #000 !important;
        color: #0f0 !important;
        outline: solid #f00 1px !important;*/
        
@@ -725,7 +726,7 @@
         position: relative;
         margin: 0 auto 1vh auto;
         width:  100%;
-        height: 90vh;
+        height: 80vh;
         background-color: var(--nude,#E4E0DB);
     }
     
@@ -742,7 +743,6 @@
         display: flex;
         flex-direction: column;
         margin: auto;
-        margin-top: -2%;
         align-items: center;
         font-family: "Montserrat";
         
@@ -760,36 +760,16 @@
         font-size: 3vw;
     }
     
-    .column2imgs{
-        display: flex;
-        flex-wrap: wrap;
-        align-content: flex-start;
+    .columns{
+        overflow: hidden;
+        width: 100%;
+        height: 80%;
     }
     
-    /*Size, paddind, pic position left side*/
-    .column1imgs img{
-        padding: 4vh 1vw 0 2.8vw;
-        width: 38.5vw;
-        height: 72.3vh;
-        object-fit: cover;
-        object-position: 0 55%;
-    }
-    
-    /*Size, paddind, pic position right side*/
-    /*this one is focused on both*/
-    .column2imgs img{
-        padding: 4vh 3vw 2vh 0;
-        width: 38.5vw;
-        height: 35.2vh;
-        object-fit: cover;
-        object-position: 0 66%;
-    }
-    
-    /*Size, paddind, pic position. bottom right side picture*/
-    /*focused on bottom rigth side*/
-    .column2imgs img:last-child{
-        padding: 0 0 0 0;
-        object-position: 0 68%;
+    #img-container{
+        margin: 0 5vw 0 3vw;
+        width: 80vw;
+        height: 100%;
     }
     
     /*just display and content of footer "box" */
@@ -801,6 +781,7 @@
     height: 45w;
     width: 100vw;
     align-items: center;
+    justify-content: center;
     }
     
     /*Text align of footer */
@@ -847,11 +828,14 @@
     }
     /*logo position */
     .logoft img{
-        width: 18.5vw;
-        height: 18.5vw;
+        width: 13.5vw;
+        height: 13.5vw;
         cursor: pointer; 
     }
     
+    .logoig{
+        padding: .4vh 0 0 1vw ;
+    }
     .sclogos{
         justify-content: space-between;
         display: flex;
@@ -863,8 +847,8 @@
         margin: auto;
         padding: auto;
         position: relative;
-        width: 16vw;
-        height: 16vw; 
+        width: 14vw;
+        height: 14vw; 
         cursor: pointer;
     }
     

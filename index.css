@@ -462,10 +462,10 @@
         color: var(--fC,#000000);
         font-family: "Montserrat";
        /*ERRASE IN DEBUG */
-       /*background: #000 !important;
+       background: #000 !important;
        color: #0f0 !important;
        outline: solid #f00 1px !important;
-       */
+       
     }
     
     /*background page color  */
@@ -657,7 +657,6 @@
         width: 41.8vw;
         height: 44.4vh;
         object-fit: cover;
-        object-position: 0 62%;
         filter:var(--boxS,75%);
     }
     
@@ -749,13 +748,13 @@
     /*Size, paddind, Title text*/
     .cbTtile {
         letter-spacing: .66vw;
-        font-size: 3vw;
+        font-size: 6vw;
        
     }
     
     /*Size, margin, small text*/
     .cbParag {
-        font-size: 1.4vw;
+        font-size: 3vw;
     }
     
     .column2imgs{
@@ -793,12 +792,17 @@
     /*just display and content of footer "box" */
     footer{
     height: 9vh;
-    display: flex;  
-    justify-content: space-between; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     }
     
     /*Text align of footer */
     .footerTextBox{
+        order: 3;
+        
+    align-self: center;
     position: relative;
     text-align: center;
     align-items: center;
@@ -837,20 +841,24 @@
     
     /*logo position */
     .logoft img{
-        display: flex;
-        align-items: center;
-        width: 4.5vw;
-        height: 4.5vw;
-        margin:  0 0 0 5vw; 
+        width: 14.5vw;
+        height: 14.5vw;
         cursor: pointer;
+        position: relative;
+        margin: auto;
     }
     
     /*socialmedia logos positions */
     .sclogos img{
-        width: 3vw;
-        height: 3vw; 
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        position: relative;
+        width: 15vw;
+        height: 15vw; 
         cursor: pointer;
     }
+   
     
     /* Modal  */
     .modal {

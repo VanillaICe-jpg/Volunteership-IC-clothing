@@ -525,8 +525,8 @@
     header .logo img{
         display: flex;
         align-items: center;
-        width: 14.5vw;
-        height: 14.5vw;
+        width: 15.5vw;
+        height: 15.5vw;
         margin:  0 0 0 4vw; 
         cursor: pointer;
     }
@@ -580,7 +580,7 @@
         align-items: center;
         justify-content: center;
         position: relative;
-        margin: 2vh auto 6vh auto;
+        margin: 2vh auto 4vh auto;
         line-height: 100px;
         font-size: 6vw;
         letter-spacing: 0.3vw;
@@ -598,26 +598,28 @@
     
     /*Position of collage BOX, size, color,*/
     .group_images{
+        align-items: center;
         display: flex;
         position: relative;
         margin: auto;
-        margin-bottom: 10vh;
-        margin-top: 6vh;
-        width:  85%;
+        margin-bottom: 4vh;
+        margin-top: 4vh;
+        width:  100%;
         height: 80vh;
         background-color: var(--nude,#E4E0DB);
+        align-items: center;
+        justify-content: center;
     }
     
     /*Text in the middle of collage box (size, color, position,etc.)*/
     .gimgsT{
+        display: flex;
         font-weight: bold;
-        top: 50%;
-        left: 17%;
+        margin: auto;
         position: absolute;
-        font-size: 3.2vh;
+        font-size: 4vh;
         font-family: "Montserrat";
         color: #ffffff;
-        transform: translate(-12%, -50%);
     }
     
     /*Group of images left side (flex, padding)*/
@@ -635,8 +637,8 @@
     
     /*size, padding, filter, fit Of top left picture*/
     .column1 img:first-child{
-        height: 34.8vh;
-        width: 41.8vw;
+        height: 35.5vh;
+        width: 49.5vw;
         padding-bottom: 0.5vw;
         object-fit: cover;
         object-position: 30% 70%;
@@ -644,7 +646,7 @@
     }
     /*size, padding, filter, fit Of bottom left picture*/
     .column1 img:last-child{
-        width: 41.8vw;
+        width: 49.5vw;
         height: 44.2vh;
         object-fit: cover;
         object-position: 0 72%;
@@ -654,8 +656,8 @@
     /*size, padding, filter, fit Of top right picture*/
     .column2 img:first-child{
         padding-bottom: 0.5vw;
-        width: 41.8vw;
-        height: 44.4vh;
+        width: 49.5vw;
+        height: 45.1vh;
         object-fit: cover;
         filter:var(--boxS,75%);
     }
@@ -663,7 +665,7 @@
     /*size, padding, filter, fit Of bottom right picture*/
     .column2 img:last-child{
         height: 34.6vh;
-        width: 41.8vw;
+        width: 49.5vw;
         object-fit: cover;
         object-position: 0 66%;
         filter:var(--boxS);
@@ -721,14 +723,15 @@
         display: flex;
         flex-wrap: wrap;
         position: relative;
-        margin: 0 auto 8vh auto;
-        width:  85%;
+        margin: 0 auto 1vh auto;
+        width:  100%;
         height: 90vh;
         background-color: var(--nude,#E4E0DB);
     }
     
     /*Columns of pictures in a BOX*/
     .columns{
+        margin: auto;
     display: flex;
     flex-wrap: nowrap;
     }
@@ -791,22 +794,22 @@
     
     /*just display and content of footer "box" */
     footer{
-    height: 9vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
+    position: relative;
+    height: 45w;
+    width: 100vw;
+    align-items: center;
     }
     
     /*Text align of footer */
     .footerTextBox{
         order: 3;
-        
-    align-self: center;
     position: relative;
     text-align: center;
-    align-items: center;
-    margin: 2vh;
+    
+    margin-bottom: 2vh;
     }
     
     /*brand name and privacity font size and spacing*/
@@ -839,26 +842,31 @@
         padding-top: 1vh;
     }
     
+    .logoBox{
+        order: 1;
+    }
     /*logo position */
     .logoft img{
-        width: 14.5vw;
-        height: 14.5vw;
-        cursor: pointer;
-        position: relative;
-        margin: auto;
+        width: 18.5vw;
+        height: 18.5vw;
+        cursor: pointer; 
     }
     
+    .sclogos{
+        justify-content: space-between;
+        display: flex;
+        position: relative;
+        order: 2;
+    }
     /*socialmedia logos positions */
     .sclogos img{
-        display: flex;
-        flex-wrap: wrap;
         margin: auto;
+        padding: auto;
         position: relative;
-        width: 15vw;
-        height: 15vw; 
+        width: 16vw;
+        height: 16vw; 
         cursor: pointer;
     }
-   
     
     /* Modal  */
     .modal {

@@ -1,8 +1,16 @@
 # Volunteership-IC-clothing
-Full development of a IC clothing web page, wireframe,muckups, code, etc.
+
+Welcome to my project!
+Full development of a IC clothing web page
+
+Include: wireframe,muckups, code, notes, etc.
 
 You can look for the design procces at "main" branch.
 at master branch you'll find code and images
+
+Thank you to "Coding talkers" for this opportunity!
+
+Updates:
 
 10/15/2020 11:40am.- "Index finished, not responsive, only works on desktop"
 
@@ -11,3 +19,5 @@ at master branch you'll find code and images
 10/18/2020.- "Zoom in/out bugs fixed"
 
 10/22/2020.- "not too much, lot of things to do"
+
+10/24/2020.- "Finally mobile responsive"

@@ -1,3 +1,0 @@
-add responsive
-
-add css to modal

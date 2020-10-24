@@ -675,7 +675,9 @@
     
     /*position and margin, display of designs box*/
     .designsBox{
-        width: 80%;
+        overflow: hidden;
+        overflow-x: scroll;
+        width: 90%;
         display: flex;
         position: relative;
         margin: auto;
@@ -687,8 +689,8 @@
     /*position, size, filter of designs box*/
     .designs img{
         margin: 0 1vw 0 1vw;
-        height: 55vh;
-        width: 20.325vw;
+        height: 54vh;
+        width: 90vw;
         object-fit: cover;
         filter:var(--boxS,75%);
     }
@@ -696,19 +698,16 @@
     .designs img:first-child{
         margin: 0 1vw 0 0;
     }
-    /*object-position of last pictue*/
-    .designs img:last-child{
-        object-position: 65% 0%;
-    }
     
     /*Text position, size color,etc of designs section*/
     .designs p{
         display: flex;
         position: relative;
         font-family: "Montserrat";
-        font-size: 4.2vh;
+        font-size: 6vh;
         font-weight: 400;
         color: #ffffff;
+        margin-left: 3vw;
     }
     .designTexs{
         position: absolute;
@@ -743,6 +742,7 @@
         display: flex;
         flex-direction: column;
         margin: auto;
+        margin-top: -1vh;
         align-items: center;
         font-family: "Montserrat";
         
@@ -751,21 +751,29 @@
     /*Size, paddind, Title text*/
     .cbTtile {
         letter-spacing: .66vw;
-        font-size: 6vw;
+        font-size: 7vw;
        
     }
     
     /*Size, margin, small text*/
     .cbParag {
-        font-size: 3vw;
+        font-size: 4vw;
     }
     
+    /*Box of the color tops images*/
     .columns{
         overflow: hidden;
+        overflow-x: scroll;
         width: 100%;
         height: 80%;
     }
     
+    /*I used columns in desktop mode, so this is a error in small design*/
+    .column2imgs{
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    /*Porpietis of the 3 images of colors*/
     #img-container{
         margin: 0 5vw 0 3vw;
         width: 80vw;
@@ -828,6 +836,7 @@
     }
     /*logo position */
     .logoft img{
+        padding: 0 0 0 1.5vw;
         width: 13.5vw;
         height: 13.5vw;
         cursor: pointer; 

@@ -21,3 +21,5 @@ Updates:
 10/22/2020.- "not too much, lot of things to do"
 
 10/24/2020.- "Finally mobile responsive"
+
+10/24/2020 10:00pm .- "Index completed <3"

@@ -161,7 +161,8 @@
         position: absolute;
         justify-content: space-between;
         left: 27vw;
-        width: 50%;
+        font-size: 10VW;
+        letter-spacing: 35vw;
         height: 10vh;
         bottom:15vh;
         
@@ -497,15 +498,22 @@
         display: flex;
         position: relative;
         order: 2;
+
+        
     }
     /*socialmedia logos positions */
-    .sclogos img{
+    .sclogos {
+        display: flex;
+        letter-spacing: 2vw;
+        font-size: 6.0vw;
+        cursor: pointer;
         margin: auto;
         padding: auto;
         position: relative;
-        width: 14vw;
-        height: 14vw; 
-        cursor: pointer;
+    }
+
+    .logoig{
+        margin-top: -.5VW;
     }
     
     /* Modal  */
@@ -954,9 +962,10 @@
     }
 
     /*socialmedia logos positions */
-    .sclogos img{
-        width: 6vw;
-        height: 6vw; 
+    .sclogos {
+        display: flex;
+        letter-spacing: 2vw;
+        font-size: 4vw;
         cursor: pointer;
     }
 
@@ -1089,8 +1098,8 @@ header.sticky ul li a{
 header .logo img{
     display: flex;
     align-items: center;
-    width: 6.5vw;
-    height: 6.5vw;
+    width: 5.5vw;
+    height: 5.5vw;
     margin:  0 0 0 4vw; 
     cursor: pointer;
 }
@@ -1103,32 +1112,33 @@ header .logo img{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 86%;
-position: relative;
-
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
 /* brand name position, font, size, color*/
 .name{
+    display: flex;
     text-align: center;
-    position: absolute;
+    position: relative;
     font-family: "Merriweather";
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     font-size: 6vh;
     color: rgb(0, 0, 0);
+    padding-bottom: 2vw;
 }
 
 /*text under brand name (position, color, size, font, etc.)*/
 .slogan{
+    display: flex;
+    justify-content: center;
     text-align: center;
     position: absolute;
     font-family: "Merriweather";
-    top: 87%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     font-size: 3vh;
-    margin-top: 1vh;
     color: rgb(0, 0, 0);
 }
 
@@ -1162,6 +1172,7 @@ position: relative;
 
 /*Position of collage BOX, size, color,*/
 .group_images{
+    overflow: hidden;
     display: flex;
     position: relative;
     margin: auto;
@@ -1174,11 +1185,10 @@ position: relative;
 
 /*Text in the middle of collage box (size, color, position,etc.)*/
 .gimgsT{
-    font-weight: bold;
     top: 50%;
     left: 30%;
     position: absolute;
-    font-size: 10vh;
+    font-size: 5vw;
     font-family: "Montserrat";
     color: #ffffff;
     transform: translate(-15%, -50%);
@@ -1200,7 +1210,7 @@ position: relative;
 /*size, padding, filter, fit Of top left picture*/
 .column1 img:first-child{
     height: 34.8vh;
-    width: 41.8vw;
+    width: 43vw;
     padding-bottom: 0.5vw;
     object-fit: cover;
     object-position: 0 70%;
@@ -1208,7 +1218,7 @@ position: relative;
 }
 /*size, padding, filter, fit Of bottom left picture*/
 .column1 img:last-child{
-    width: 41.8vw;
+    width: 43vw;
     height: 44.6vh;
     object-fit: cover;
     object-position: 0 72%;
@@ -1218,7 +1228,7 @@ position: relative;
 /*size, padding, filter, fit Of top right picture*/
 .column2 img:first-child{
     padding-bottom: 0.5vw;
-    width: 41.8vw;
+    width: 43vw;
     height: 44.4vh;
     object-fit: cover;
     object-position: 0 62%;
@@ -1228,7 +1238,7 @@ position: relative;
 /*size, padding, filter, fit Of bottom right picture*/
 .column2 img:last-child{
     height: 35vh;
-    width: 41.8vw;
+    width: 43vw;
     object-fit: cover;
     object-position: 0 66%;
     filter:var(--boxS);
@@ -1403,16 +1413,17 @@ margin: 2vh;
 .logoft img{
     display: flex;
     align-items: center;
-    width: 6.5vw;
-    height: 6.5vw;
+    width: 5.5vw;
+    height: 5.5vw;
     margin:  0 0 0 5vw; 
     cursor: pointer;
 }
 
 /*socialmedia logos positions */
-.sclogos img{
-    width: 5vw;
-    height: 5vw; 
+.sclogos {
+    display: flex;
+    letter-spacing: 2vw;
+    font-size: 3.0vw;
     cursor: pointer;
 }
 

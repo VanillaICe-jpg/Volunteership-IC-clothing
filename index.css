@@ -87,7 +87,7 @@
         transform-origin: 5px 0px;
         transition: transform 0.2s ,
                     background 0.2s ,
-                    opacity 0.2s ;
+                    opacity 0.2ss ;
       }
       
       #menuToggle span:first-child
@@ -130,7 +130,7 @@
       #menuToggle input:checked ~ .textbox
       {
         transform: translate(-88vw, -11vw);;
-        transition: 1s;
+        transition: 0.3s;
       }
     header ul li{
         display: flex;
@@ -266,7 +266,7 @@
         font-weight: bold;
         margin: auto;
         position: absolute;
-        font-size: 4vh;
+        font-size: 3.5vh;
         font-family: "Montserrat";
         color: #ffffff;
     }
@@ -412,8 +412,8 @@
     .columns{
         overflow: hidden;
         overflow-x: scroll;
-        width: 100%;
-        height: 80%;
+        width: 90%;
+        height: 68%;
     }
     
     /*I used columns in desktop mode, so this is a error in small design*/
@@ -424,8 +424,8 @@
     /*Porpietis of the 3 images of colors*/
     #img-container{
         margin: 0 5vw 0 3vw;
-        width: 80vw;
-        height: 100%;
+       width: 65vw;
+       height: 60vh;
     }
     
     /*just display and content of footer "box" */
@@ -735,7 +735,7 @@
         display: flex;
         margin: auto;
         position: absolute;
-        font-size: 7vh;
+        font-size: 5vh;
         font-family: "Montserrat";
         color: #ffffff;
     }
@@ -1186,9 +1186,9 @@ header .logo img{
 /*Text in the middle of collage box (size, color, position,etc.)*/
 .gimgsT{
     top: 50%;
-    left: 30%;
+    left: 22%;
     position: absolute;
-    font-size: 5vw;
+    font-size: 6vw;
     font-family: "Montserrat";
     color: #ffffff;
     transform: translate(-15%, -50%);

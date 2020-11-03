@@ -3,35 +3,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
 
+/*variables*/
+:root{
+    --fC:#000000;
+    --nude:#E4E0DB;
+    --boxS:brightness(75%);
+}  
+/*Global base properties*/
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: var(--fC,#000000);
+    font-family: "Montserrat";
+   /*ERRASE IN DEBUG */
+   /*
+   background: #000 !important;
+   color: #0f0 !important;
+   outline: solid #f00 1px !important;*/
+   
+}
+
+/*background page color  */
+body{
+    background-color: #ffffff;
+}
+/*when get "sticky" = change color to*/
+header.sticky{
+    background-color: #fafafa;
+}
+
+header ul li{
+    position: relative;
+    list-style: none;
+    padding:  auto;
+}
+
+/*navbar logo*/
+header .logo img{
+    display: flex;
+    align-items: center;
+    margin:  0 0 0 4vw; 
+    cursor: pointer;
+}
+
+/*Just position and size of arrow*/
+.arrow img{
+    position: relative;
+    padding: auto;
+        transform: rotate(90deg);
+    }
+
+/*Group of images left side (flex, padding)*/
+.column1{
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 0.5vw;
+}
+
+/*Group of images right side (flex, padding)*/
+.column2{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.designs img:first-child{
+    margin: 0 1vw 0 0;
+}
+
+
 
 /* Small devices (landscape phones, 576px and up)*/
 @media (max-width: 767.98px) { 
 
-    /*variables*/
-    :root{
-        --fC:#000000;
-        --nude:#E4E0DB;
-        --boxS:brightness(75%);
-    }  
-    /*Global base properties*/
-    *{
-        margin: 0;
-        padding: 0;
-        text-decoration: none;
-        color: var(--fC,#000000);
-        font-family: "Montserrat";
-       /*ERRASE IN DEBUG */
-       /*
-       background: #000 !important;
-       color: #0f0 !important;
-       outline: solid #f00 1px !important;*/
-       
-    }
     
-    /*background page color  */
-    body{
-        background-color: #ffffff;
-    }
     
     /*navbar properties*/
     header{
@@ -41,12 +86,6 @@
        transition: 0.6s;
        z-index: 1;
     }
-    
-    /*when get "sticky" = change color to*/
-    header.sticky{
-        background-color: #fafafa;
-    }
-  
     
     .content {
         position: absolute;
@@ -126,12 +165,12 @@
         transition: transform 1s;
       }
       
-      
       #menuToggle input:checked ~ .textbox
       {
         transform: translate(-88vw, -11vw);;
         transition: 0.3s;
       }
+
     header ul li{
         display: flex;
         justify-content: flex-end;
@@ -143,7 +182,6 @@
         padding: 0 0 10vw 0;
     }
     
-   
     /*Position, size, font, color,etc of navbar options*/
     header ul li a {
         display: flex;
@@ -167,18 +205,11 @@
         bottom:15vh;
         
     }
-    
-    
-   
-    
+     
     /*navbar logo*/
     header .logo img{
-        display: flex;
-        align-items: center;
         width: 15.5vw;
         height: 15.5vw;
-        margin:  0 0 0 4vw; 
-        cursor: pointer;
     }
     
     /*Hero image, size, position, gradient*/
@@ -187,7 +218,7 @@
         flex-wrap: wrap;
         width: 100%;
         height: 95vh;
-        background: linear-gradient(to bottom, rgba(255, 255, 255, 0)40%, rgb(255, 255, 255) 100%), url(imgs/pic1.jpg);
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0)40%, rgb(255, 255, 255) 100%), url(/imgs/pic1.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 46% 0;
@@ -216,12 +247,9 @@
     
     /*Just position and size of arrow*/
     .arrow img{
-        position: relative;
         left: 44%;
         width: 14vw;
         height: 14vw;
-        padding: auto;
-        transform: rotate(90deg);
     }
     
     /*Text between sections, position, color, size, font of box and text*/
@@ -269,19 +297,6 @@
         font-size: 3.5vh;
         font-family: "Montserrat";
         color: #ffffff;
-    }
-    
-    /*Group of images left side (flex, padding)*/
-    .column1{
-        display: flex;
-        flex-wrap: wrap;
-        padding-right: 0.5vw;
-    }
-    
-    /*Group of images right side (flex, padding)*/
-    .column2{
-        display: flex;
-        flex-wrap: wrap;
     }
     
     /*size, padding, filter, fit Of top left picture*/
@@ -343,9 +358,7 @@
         filter:var(--boxS,75%);
     }
     
-    .designs img:first-child{
-        margin: 0 1vw 0 0;
-    }
+    
     
     /*Text position, size color,etc of designs section*/
     .designs p{
@@ -424,7 +437,7 @@
     /*Porpietis of the 3 images of colors*/
     #img-container{
         margin: 0 5vw 0 3vw;
-       width: 65vw;
+       width: 70vw;
        height: 60vh;
     }
     
@@ -557,31 +570,7 @@
 
 /* Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) and (max-width: 991.98px)  {
-     /*Variables*/
-     :root{
-        --fC:#000000;
-        --nude:#E4E0DB;
-        --boxS:brightness(75%);
-    }  
-    /*Global base properties*/
-    *{
-        margin: 0;
-        padding: 0;
-        text-decoration: none;
-        color: var(--fC,#000000);
-        font-family: "Montserrat";
-    /*ERRASE IN DEBUG */
-    /*background: #000 !important;
-    color: #0f0 !important;
-    outline: solid #f00 1px !important;*/
-        
-    }
-
-    /*background page color  */
-    body{
-        background-color: #ffffff;
-    }
-
+    
     /*navbar properties*/
     header{
     position: fixed;
@@ -617,11 +606,7 @@
         align-items: center;
     }
 
-    header ul li{
-        position: relative;
-        list-style: none;
-        padding:  auto;
-    }
+    
 
     /*Position, size, font, color,etc of navbar options*/
     header ul li a {
@@ -640,21 +625,19 @@
         font-size: 2.4vw;
     }
 
+    
+
     /*navbar logo*/
     header .logo img{
-        display: flex;
-        align-items: center;
         width: 7.5vw;
         height: 7.5vw;
-        margin:  0 0 0 4vw; 
-        cursor: pointer;
     }
 
     /*Hero image, size, position, gradient*/
     .banner{
         width: 100%;
         height: 91vh;
-        background: linear-gradient(to bottom, rgba(255, 255, 255, 0)70%, rgb(255, 255, 255) 100%), url(imgs/pic1.jpg);
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0)70%, rgb(255, 255, 255) 100%), url(/imgs/pic1.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 0 50%;
@@ -687,14 +670,13 @@
         color: rgb(0, 0, 0);
     }
 
+
+
     /*Just position and size of arrow*/
     .arrow img{
-        position: relative;
         left: 47%;
         width: 6vw;
         height: 6vw;
-        padding: auto;
-        transform: rotate(90deg);
     }
 
     /*Text between sections, position, color, size, font of box and text*/
@@ -740,18 +722,6 @@
         color: #ffffff;
     }
 
-    /*Group of images left side (flex, padding)*/
-    .column1{
-        display: flex;
-        flex-wrap: wrap;
-        padding-right: 0.5vw;
-    }
-
-    /*Group of images right side (flex, padding)*/
-    .column2{
-        display: flex;
-        flex-wrap: wrap;
-    }
 
     /*size, padding, filter, fit Of top left picture*/
     .column1 img:first-child{
@@ -810,9 +780,6 @@
         filter:var(--boxS,75%);
     }
     
-    .designs img:first-child{
-        margin: 0 1vw 0 0;
-    }
     
     /*Text position, size color,etc of designs section*/
     .designs p{
@@ -1011,31 +978,7 @@
 
 /* Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) { 
-    /*Variables*/
-    :root{
-    --fC:#000000;
-    --nude:#E4E0DB;
-    --boxS:brightness(75%);
-}  
-/*Global base properties*/
-*{
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    color: var(--fC,#000000);
-    font-family: "Montserrat";
-/*ERRASE IN DEBUG */
-/*background: #000 !important;
-color: #0f0 !important;
-outline: solid #f00 1px !important;*/
-    
-}
-
-/*background page color  */
-body{
-    background-color: #ffffff;
-}
-
+  
 /*navbar properties*/
 header{
 position: fixed;
@@ -1058,10 +1001,6 @@ z-index: 1;
     display: none;
 }
 
-/*when get "sticky" = change color to*/
-header.sticky{
-    background-color: #fafafa;
-}
 
 /*Positions and properties of navbar*/
 header ul{
@@ -1071,11 +1010,7 @@ header ul{
     align-items: center;
 }
 
-header ul li{
-    position: relative;
-    list-style: none;
-    padding:  auto;
-}
+
 
 /*Position, size, font, color,etc of navbar options*/
 header ul li a {
@@ -1108,7 +1043,7 @@ header .logo img{
 .banner{
     width: 100%;
     height: 91vh;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0)70%, rgb(255, 255, 255) 100%), url(imgs/pic1.jpg);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0)70%, rgb(255, 255, 255) 100%), url(/imgs/pic1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 86%;
@@ -1144,12 +1079,9 @@ header .logo img{
 
 /*Just position and size of arrow*/
 .arrow img{
-    position: relative;
     left: 47%;
     width: 6vw;
     height: 6vw;
-    padding: auto;
-    transform: rotate(90deg);
 }
 
 /*Text between sections, position, color, size, font of box and text*/
@@ -1194,18 +1126,7 @@ header .logo img{
     transform: translate(-15%, -50%);
 }
 
-/*Group of images left side (flex, padding)*/
-.column1{
-    display: flex;
-    flex-wrap: wrap;
-    padding-right: 0.5vw;
-}
 
-/*Group of images right side (flex, padding)*/
-.column2{
-    display: flex;
-    flex-wrap: wrap;
-}
 
 /*size, padding, filter, fit Of top left picture*/
 .column1 img:first-child{
@@ -1344,6 +1265,7 @@ flex-wrap: nowrap;
     width: 38.5vw;
     height: 72.3vh;
     object-fit: cover;
+    object-position: center;
     object-position: 0 55%;
 }
 
@@ -1465,3 +1387,13 @@ margin: 2vh;
     cursor: pointer;
 }
 }
+
+@media (min-width:769px) and (max-width: 1400px){
+    
+
+    /*Size, paddind, pic position left side*/
+    .column1imgs img{
+        object-position: 43% 55%;
+    }
+    
+    }

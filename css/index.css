@@ -1,1399 +1,1360 @@
-/*imported font families*/  
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
-
+/*imported font families*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
 
 /*variables*/
-:root{
-    --fC:#000000;
-    --nude:#E4E0DB;
-    --boxS:brightness(75%);
-}  
+:root {
+   --fC: #000000;
+   --nude: #e4e0db;
+   --boxS: brightness(75%);
+}
 /*Global base properties*/
-*{
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    color: var(--fC,#000000);
-    font-family: "Montserrat";
+* {
+   margin: 0;
+   padding: 0;
+   text-decoration: none;
+   color: var(--fC, #000000);
+   font-family: "Montserrat";
    /*ERRASE IN DEBUG */
    /*
    background: #000 !important;
    color: #0f0 !important;
    outline: solid #f00 1px !important;*/
-   
 }
 
 /*background page color  */
-body{
-    background-color: #ffffff;
+body {
+   background-color: #ffffff;
 }
 /*when get "sticky" = change color to*/
-header.sticky{
-    background-color: #fafafa;
+header.sticky {
+   background-color: #fafafa;
 }
 
-header ul li{
-    position: relative;
-    list-style: none;
-    padding:  auto;
+header ul li {
+   position: relative;
+   list-style: none;
+   padding: auto;
 }
 
 /*navbar logo*/
-header .logo img{
-    display: flex;
-    align-items: center;
-    margin:  0 0 0 4vw; 
-    cursor: pointer;
+header .logo img {
+   display: flex;
+   align-items: center;
+   margin: 0 0 0 4vw;
+   cursor: pointer;
 }
 
 /*Just position and size of arrow*/
-.arrow img{
-    position: relative;
-    padding: auto;
-        transform: rotate(90deg);
-    }
+.arrow img {
+   position: relative;
+   padding: auto;
+   transform: rotate(90deg);
+}
 
 /*Group of images left side (flex, padding)*/
-.column1{
-    display: flex;
-    flex-wrap: wrap;
-    padding-right: 0.5vw;
+.column1 {
+   display: flex;
+   flex-wrap: wrap;
+   padding-right: 0.5vw;
 }
 
 /*Group of images right side (flex, padding)*/
-.column2{
-    display: flex;
-    flex-wrap: wrap;
+.column2 {
+   display: flex;
+   flex-wrap: wrap;
 }
 
-.designs img:first-child{
-    margin: 0 1vw 0 0;
+.designs img:first-child {
+   margin: 0 1vw 0 0;
 }
-
-
 
 /* Small devices (landscape phones, 576px and up)*/
-@media (max-width: 767.98px) { 
+@media (max-width: 767.98px) {
+   /*navbar properties*/
+   header {
+      position: fixed;
+      width: 100%;
+      display: flex;
+      transition: 0.6s;
+      z-index: 1;
+   }
 
-    
-    
-    /*navbar properties*/
-    header{
-       position: fixed;
-       width: 100%;
-       display: flex;
-       transition: 0.6s;
-       z-index: 1;
-    }
-    
-    .content {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-      }
-    #menuToggle {   
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        top: 4.35vw;
-        left: 85vw;
-        z-index: 1;
-        -webkit-user-select: none;
-        user-select: none;
-      }
-      
-      #menuToggle input
-      {
-        display: flex;
-        width: 29px;
-        height: 30px;
-        position: absolute;
-        cursor: pointer;
-        opacity: 0;
-        z-index: 2;
-      }
-      
-      #menuToggle span
-      {
-        display: flex;
-        width: 29px;
-        height: 2px;
-        margin-bottom: 5px;
-        position: relative;
-        background: #000000;
-        z-index: 1;
-        transform-origin: 5px 0px;
-        transition: transform 0.2s ,
-                    background 0.2s ,
-                    opacity 0.2ss ;
-      }
-      
-      #menuToggle span:first-child
-      {
-        transform-origin: 0% 0%;
-      }
-      
-      #menuToggle span:nth-last-child(2)
-      {
-        transform-origin: 0% 100%;
-      }
-      
-      #menuToggle input:checked ~ span
-      {
-        opacity: 1;
-        transform: rotate(45deg) translate(-3px, -1px);
-      }
-      #menuToggle input:checked ~ span:nth-last-child(3)
-      {
-        opacity: 0;
-        transform: rotate(0deg) scale(0.2, 0.2);
-      }
-      
-      #menuToggle input:checked ~ span:nth-last-child(2)
-      {
-        transform: rotate(-45deg) translate(0, -1px);
-      }
-      
-      .textbox
-      {
-          width: 110vw;
-          height: 110vh;
-        background-color: #F5F6FA;
-        transform-origin: 0 0;
-        transform: translate(350%, -11vw);
-        transition: transform 1s;
-      }
-      
-      #menuToggle input:checked ~ .textbox
-      {
-        transform: translate(-88vw, -11vw);;
-        transition: 0.3s;
-      }
+   .content {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+   }
+   #menuToggle {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      top: 4.35vw;
+      left: 85vw;
+      z-index: 1;
+      -webkit-user-select: none;
+      user-select: none;
+   }
 
-    header ul li{
-        display: flex;
-        justify-content: flex-end;
-        position: relative;
-        vertical-align: st;
-        list-style: none;
-        right: 15vw;
-        top: 30vw;
-        padding: 0 0 10vw 0;
-    }
-    
-    /*Position, size, font, color,etc of navbar options*/
-    header ul li a {
-        display: flex;
-        justify-content: flex-end;
-        position: relative;
-        text-align: right;
-        font-size: 7vw;
-        text-decoration: none;
-        letter-spacing: .2vw;
-        color: black;
-    }
+   #menuToggle input {
+      display: flex;
+      width: 29px;
+      height: 30px;
+      position: absolute;
+      cursor: pointer;
+      opacity: 0;
+      z-index: 2;
+   }
 
-    .socialhead{
-        display: flex;
-        position: absolute;
-        justify-content: space-between;
-        left: 27vw;
-        font-size: 10VW;
-        letter-spacing: 35vw;
-        height: 10vh;
-        bottom:15vh;
-        
-    }
-     
-    /*navbar logo*/
-    header .logo img{
-        width: 15.5vw;
-        height: 15.5vw;
-    }
-    
-    /*Hero image, size, position, gradient*/
-    .banner{
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        height: 95vh;
-        background: linear-gradient(to bottom, rgba(255, 255, 255, 0)40%, rgb(255, 255, 255) 100%), url(/imgs/pic1.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: 46% 0;
-        align-content: flex-end;
-    }
-    
-    /* brand name position, font, size, color*/
-    .name{
-        text-align: center;
-        font-family: "Merriweather";
-        font-size: 9vw;
-        color: rgb(0, 0, 0);
-        margin: auto;
-        margin-bottom: 3vw;
-    }
-    
-    /*text under brand name (position, color, size, font, etc.)*/
-     .slogan{
-        text-align: center;
-        font-family: "Merriweather";
-        font-size: 4.5vw;
-        color: rgb(0, 0, 0);
-        margin: auto;
-        margin-bottom: 10vw;
-    }
-    
-    /*Just position and size of arrow*/
-    .arrow img{
-        left: 44%;
-        width: 14vw;
-        height: 14vw;
-    }
-    
-    /*Text between sections, position, color, size, font of box and text*/
-    .boxes{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        margin: 2vh auto 4vh auto;
-        line-height: 100px;
-        font-size: 6vw;
-        letter-spacing: 0.3vw;
-        font-family: "Montserrat";
-        font-weight: bold;
-        width: 90%;
-        height: 13vw;
-        text-align: center;
-        background-color: #E4E0DB;
-    }
+   #menuToggle span {
+      display: flex;
+      width: 29px;
+      height: 2px;
+      margin-bottom: 5px;
+      position: relative;
+      background: #000000;
+      z-index: 1;
+      transform-origin: 5px 0px;
+      transition: transform 0.2s, background 0.2s, opacity 0.2ss;
+   }
 
-    .boxes:last-of-type {
-        font-size: 5vw;
-    }
-    
-    /*Position of collage BOX, size, color,*/
-    .group_images{
-        align-items: center;
-        display: flex;
-        position: relative;
-        margin: auto;
-        margin-bottom: 4vh;
-        margin-top: 4vh;
-        width:  100%;
-        height: 80vh;
-        background-color: var(--nude,#E4E0DB);
-        justify-content: center;
-    }
-    
-    /*Text in the middle of collage box (size, color, position,etc.)*/
-    .gimgsT{
-        display: flex;
-        font-weight: bold;
-        margin: auto;
-        position: absolute;
-        font-size: 3.5vh;
-        font-family: "Montserrat";
-        color: #ffffff;
-    }
-    
-    /*size, padding, filter, fit Of top left picture*/
-    .column1 img:first-child{
-        height: 35.5vh;
-        width: 49.5vw;
-        padding-bottom: 0.5vw;
-        object-fit: cover;
-        object-position: 30% 70%;
-        filter: var(--boxS,75%);
-    }
-    /*size, padding, filter, fit Of bottom left picture*/
-    .column1 img:last-child{
-        width: 49.5vw;
-        height: 44.6vh;
-        object-fit: cover;
-        object-position: 0 72%;
-        filter:var(--boxS,75%);
-    }
-    
-    /*size, padding, filter, fit Of top right picture*/
-    .column2 img:first-child{
-        padding-bottom: 0.5vw;
-        width: 49.5vw;
-        height: 45.1vh;
-        object-fit: cover;
-        filter:var(--boxS,75%);
-    }
-    
-    /*size, padding, filter, fit Of bottom right picture*/
-    .column2 img:last-child{
-        height: 35vh;
-        width: 49.5vw;
-        object-fit: cover;
-        object-position: 0 66%;
-        filter:var(--boxS);
-        
-    }
-    
-    /*position and margin, display of designs box*/
-    .designsBox{
-        overflow: hidden;
-        overflow-x: scroll;
-        width: 90%;
-        display: flex;
-        position: relative;
-        margin: auto;
-        margin-bottom: 6vh;
-        padding-top: 3vh;
-        padding-right: 5vw;
-    }
-    
-    /*position, size, filter of designs box*/
-    .designs img{
-        margin: 0 1vw 0 1vw;
-        height: 54vh;
-        width: 90vw;
-        object-fit: cover;
-        filter:var(--boxS,75%);
-    }
-    
-    
-    
-    /*Text position, size color,etc of designs section*/
-    .designs p{
-        display: flex;
-        position: relative;
-        font-family: "Montserrat";
-        font-size: 6vh;
-        font-weight: 400;
-        color: #ffffff;
-        margin-left: 3vw;
-    }
-    .designTexs{
-        position: absolute;
-        display: flex;
-        flex-flow: column wrap;
-        margin: 0 0 0 1%;
-        top: 70%;
-    }
-    
-    /*Color, size, position, etc of colors section */
-    .colorBox{
-        vertical-align: middle;
-        display: flex;
-        flex-wrap: wrap;
-        position: relative;
-        margin: 0 auto 1vh auto;
-        width:  100%;
-        height: 80vh;
-        background-color: var(--nude,#E4E0DB);
-    }
-    
-    /*Columns of pictures in a BOX*/
-    .columns{
-        margin: auto;
-    display: flex;
-    flex-wrap: nowrap;
-    }
-    
-    /*Size, position, align, etc "Text box"*/
-    .textColorS {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-        margin-top: -1vh;
-        align-items: center;
-        font-family: "Montserrat";
-        
-    }
-    
-    /*Size, paddind, Title text*/
-    .cbTtile {
-        letter-spacing: .66vw;
-        font-size: 7vw;
-       
-    }
-    
-    /*Size, margin, small text*/
-    .cbParag {
-        font-size: 4vw;
-    }
-    
-    /*Box of the color tops images*/
-    .columns{
-        overflow: hidden;
-        overflow-x: scroll;
-        width: 90%;
-        height: 68%;
-    }
-    
-    /*I used columns in desktop mode, so this is a error in small design*/
-    .column2imgs{
-        display: flex;
-        flex-wrap: nowrap;
-    }
-    /*Porpietis of the 3 images of colors*/
-    #img-container{
-        margin: 0 5vw 0 3vw;
-       width: 70vw;
-       height: 60vh;
-    }
-    
-    /*just display and content of footer "box" */
-    footer{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    position: relative;
-    height: 45w;
-    width: 100vw;
-    align-items: center;
-    justify-content: center;
-    }
-    
-    /*Text align of footer */
-    .footerTextBox{
-        order: 3;
-    position: relative;
-    text-align: center;
-    
-    margin-bottom: 2vh;
-    }
-    
-    /*brand name and privacity font size and spacing*/
-    .footerInfo{
-        font-size: 2vh;
-        letter-spacing: .3vw;
-        margin: auto;
-    }
-    
-    /*privacity button font size, border, bacrkground, etc. */
-    .footerInfo button{
-        font-size: 2vh;
-        letter-spacing: 0.1vw;
-        border: none;
-        background-color: inherit;
-        cursor: pointer;
-    }
-    
-    /*Privacity hover color size,etc*/
-    .footerInfo button:hover{
-        font-size: 2vh;
-        letter-spacing: 0.1vw;
-        color: rgb(0, 153, 255);
-    }
-    
-    /*location text size, margin */
-    .location{
-        font-size: 1.5vh;
-        margin: auto;
-        padding-top: 1vh;
-    }
-    
-    .logoBox{
-        order: 1;
-    }
-    /*logo position */
-    .logoft img{
-        padding: 0 0 0 1.5vw;
-        width: 13.5vw;
-        height: 13.5vw;
-        cursor: pointer; 
-    }
-    
-    .logoig{
-        padding: .4vh 0 0 1vw ;
-    }
-    .sclogos{
-        justify-content: space-between;
-        display: flex;
-        position: relative;
-        order: 2;
+   #menuToggle span:first-child {
+      transform-origin: 0% 0%;
+   }
 
-        
-    }
-    /*socialmedia logos positions */
-    .sclogos {
-        display: flex;
-        letter-spacing: 2vw;
-        font-size: 6.0vw;
-        cursor: pointer;
-        margin: auto;
-        padding: auto;
-        position: relative;
-    }
+   #menuToggle span:nth-last-child(2) {
+      transform-origin: 0% 100%;
+   }
 
-    .logoig{
-        margin-top: -.5VW;
-    }
-    
-    /* Modal  */
-    .modal {
-        display: none; 
-        position: fixed; 
-        z-index: 1; 
-        left: 0;
-        top: 0;
-        width: 100%; 
-        height: 100%; 
-        overflow: auto;
-        background-color: rgb(0,0,0); 
-        background-color: rgba(0,0,0,0.4); 
-      }
-      
-      /* Modal Content/Box */
-      .modal-content {
-        background-color: var(--nude,#E4E0DB);
-        margin: 15% auto; 
-        padding: 20px;
-        border: 1px solid #888;
-        width: 80%; 
-      }
-      
-      /* The Close Button */
-      .close {
-        color: #aaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-      }
-      
-      .close:hover,
-      .close:focus {
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
-      }    
+   #menuToggle input:checked ~ span {
+      opacity: 1;
+      transform: rotate(45deg) translate(-3px, -1px);
+   }
+   #menuToggle input:checked ~ span:nth-last-child(3) {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.2, 0.2);
+   }
+
+   #menuToggle input:checked ~ span:nth-last-child(2) {
+      transform: rotate(-45deg) translate(0, -1px);
+   }
+
+   .textbox {
+      width: 110vw;
+      height: 110vh;
+      background-color: #f5f6fa;
+      transform-origin: 0 0;
+      transform: translate(350%, -11vw);
+      transition: transform 1s;
+   }
+
+   #menuToggle input:checked ~ .textbox {
+      transform: translate(-88vw, -11vw);
+      transition: 0.3s;
+   }
+
+   header ul li {
+      display: flex;
+      justify-content: flex-end;
+      position: relative;
+      vertical-align: st;
+      list-style: none;
+      right: 15vw;
+      top: 30vw;
+      padding: 0 0 10vw 0;
+   }
+
+   /*Position, size, font, color,etc of navbar options*/
+   header ul li a {
+      display: flex;
+      justify-content: flex-end;
+      position: relative;
+      text-align: right;
+      font-size: 7vw;
+      text-decoration: none;
+      letter-spacing: 0.2vw;
+      color: black;
+   }
+
+   .socialhead {
+      display: flex;
+      position: absolute;
+      justify-content: space-between;
+      left: 27vw;
+      font-size: 10vw;
+      letter-spacing: 35vw;
+      height: 10vh;
+      bottom: 15vh;
+   }
+
+   /*navbar logo*/
+   header .logo img {
+      width: 15.5vw;
+      height: 15.5vw;
+   }
+
+   /*Hero image, size, position, gradient*/
+   .banner {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      height: 95vh;
+      background: linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0) 40%,
+            rgb(255, 255, 255) 100%
+         ),
+         url(/imgs/pic1.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 46% 0;
+      align-content: flex-end;
+   }
+
+   /* brand name position, font, size, color*/
+   .name {
+      text-align: center;
+      font-family: "Merriweather";
+      font-size: 9vw;
+      color: rgb(0, 0, 0);
+      margin: auto;
+      margin-bottom: 3vw;
+   }
+
+   /*text under brand name (position, color, size, font, etc.)*/
+   .slogan {
+      text-align: center;
+      font-family: "Merriweather";
+      font-size: 4.5vw;
+      color: rgb(0, 0, 0);
+      margin: auto;
+      margin-bottom: 10vw;
+   }
+
+   /*Just position and size of arrow*/
+   .arrow img {
+      left: 44%;
+      width: 14vw;
+      height: 14vw;
+   }
+
+   /*Text between sections, position, color, size, font of box and text*/
+   .boxes {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin: 2vh auto 4vh auto;
+      line-height: 100px;
+      font-size: 6vw;
+      letter-spacing: 0.3vw;
+      font-family: "Montserrat";
+      font-weight: bold;
+      width: 90%;
+      height: 13vw;
+      text-align: center;
+      background-color: #e4e0db;
+   }
+
+   .boxes:last-of-type {
+      font-size: 5vw;
+   }
+
+   /*Position of collage BOX, size, color,*/
+   .group_images {
+      align-items: center;
+      display: flex;
+      position: relative;
+      margin: auto;
+      margin-bottom: 4vh;
+      margin-top: 4vh;
+      width: 100%;
+      height: 80vh;
+      background-color: var(--nude, #e4e0db);
+      justify-content: center;
+   }
+
+   /*Text in the middle of collage box (size, color, position,etc.)*/
+   .gimgsT {
+      display: flex;
+      font-weight: bold;
+      margin: auto;
+      position: absolute;
+      font-size: 3.5vh;
+      font-family: "Montserrat";
+      color: #ffffff;
+   }
+
+   /*size, padding, filter, fit Of top left picture*/
+   .column1 img:first-child {
+      height: 35.5vh;
+      width: 49.5vw;
+      padding-bottom: 0.5vw;
+      object-fit: cover;
+      object-position: 30% 70%;
+      filter: var(--boxS, 75%);
+   }
+   /*size, padding, filter, fit Of bottom left picture*/
+   .column1 img:last-child {
+      width: 49.5vw;
+      height: 44.6vh;
+      object-fit: cover;
+      object-position: 0 72%;
+      filter: var(--boxS, 75%);
+   }
+
+   /*size, padding, filter, fit Of top right picture*/
+   .column2 img:first-child {
+      padding-bottom: 0.5vw;
+      width: 49.5vw;
+      height: 45.1vh;
+      object-fit: cover;
+      filter: var(--boxS, 75%);
+   }
+
+   /*size, padding, filter, fit Of bottom right picture*/
+   .column2 img:last-child {
+      height: 35vh;
+      width: 49.5vw;
+      object-fit: cover;
+      object-position: 0 66%;
+      filter: var(--boxS);
+   }
+
+   /*position and margin, display of designs box*/
+   .designsBox {
+      overflow: hidden;
+      overflow-x: scroll;
+      width: 90%;
+      display: flex;
+      position: relative;
+      margin: auto;
+      margin-bottom: 6vh;
+      padding-top: 3vh;
+      padding-right: 5vw;
+   }
+
+   /*position, size, filter of designs box*/
+   .designs img {
+      margin: 0 1vw 0 1vw;
+      height: 54vh;
+      width: 90vw;
+      object-fit: cover;
+      filter: var(--boxS, 75%);
+   }
+
+   /*Text position, size color,etc of designs section*/
+   .designs p {
+      display: flex;
+      position: relative;
+      font-family: "Montserrat";
+      font-size: 6vh;
+      font-weight: 400;
+      color: #ffffff;
+      margin-left: 3vw;
+   }
+   .designTexs {
+      position: absolute;
+      display: flex;
+      flex-flow: column wrap;
+      margin: 0 0 0 1%;
+      top: 70%;
+   }
+
+   /*Color, size, position, etc of colors section */
+   .colorBox {
+      vertical-align: middle;
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+      margin: 0 auto 1vh auto;
+      width: 100%;
+      height: 80vh;
+      background-color: var(--nude, #e4e0db);
+   }
+
+   /*Columns of pictures in a BOX*/
+   .columns {
+      margin: auto;
+      display: flex;
+      flex-wrap: nowrap;
+   }
+
+   /*Size, position, align, etc "Text box"*/
+   .textColorS {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      margin-top: -1vh;
+      align-items: center;
+      font-family: "Montserrat";
+   }
+
+   /*Size, paddind, Title text*/
+   .cbTtile {
+      letter-spacing: 0.66vw;
+      font-size: 7vw;
+   }
+
+   /*Size, margin, small text*/
+   .cbParag {
+      font-size: 4vw;
+   }
+
+   /*Box of the color tops images*/
+   .columns {
+      overflow: hidden;
+      overflow-x: scroll;
+      width: 90%;
+      height: 68%;
+   }
+
+   /*I used columns in desktop mode, so this is a error in small design*/
+   .column2imgs {
+      display: flex;
+      flex-wrap: nowrap;
+   }
+   /*Porpietis of the 3 images of colors*/
+   #img-container {
+      margin: 0 5vw 0 3vw;
+      width: 70vw;
+      height: 60vh;
+   }
+
+   /*just display and content of footer "box" */
+   footer {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      position: relative;
+      height: 45w;
+      width: 100vw;
+      align-items: center;
+      justify-content: center;
+   }
+
+   /*Text align of footer */
+   .footerTextBox {
+      order: 3;
+      position: relative;
+      text-align: center;
+
+      margin-bottom: 2vh;
+   }
+
+   /*brand name and privacity font size and spacing*/
+   .footerInfo {
+      font-size: 2vh;
+      letter-spacing: 0.3vw;
+      margin: auto;
+   }
+
+   /*privacity button font size, border, bacrkground, etc. */
+   .footerInfo button {
+      font-size: 2vh;
+      letter-spacing: 0.1vw;
+      border: none;
+      background-color: inherit;
+      cursor: pointer;
+   }
+
+   /*Privacity hover color size,etc*/
+   .footerInfo button:hover {
+      font-size: 2vh;
+      letter-spacing: 0.1vw;
+      color: rgb(0, 153, 255);
+   }
+
+   /*location text size, margin */
+   .location {
+      font-size: 1.5vh;
+      margin: auto;
+      padding-top: 1vh;
+   }
+
+   .logoBox {
+      order: 1;
+   }
+   /*logo position */
+   .logoft img {
+      padding: 0 0 0 1.5vw;
+      width: 13.5vw;
+      height: 13.5vw;
+      cursor: pointer;
+   }
+
+   .logoig {
+      padding: 0.4vh 0 0 1vw;
+   }
+   .sclogos {
+      justify-content: space-between;
+      display: flex;
+      position: relative;
+      order: 2;
+   }
+   /*socialmedia logos positions */
+   .sclogos {
+      display: flex;
+      letter-spacing: 2vw;
+      font-size: 6vw;
+      cursor: pointer;
+      margin: auto;
+      padding: auto;
+      position: relative;
+   }
+
+   .logoig {
+      margin-top: -0.5vw;
+   }
+
+   /* Modal  */
+   .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.4);
+   }
+
+   /* Modal Content/Box */
+   .modal-content {
+      background-color: var(--nude, #e4e0db);
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+   }
+
+   /* The Close Button */
+   .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+   }
+
+   .close:hover,
+   .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+   }
 }
 
 /* Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) and (max-width: 991.98px)  {
-    
-    /*navbar properties*/
-    header{
-    position: fixed;
-    width: 100%;
-    height: 6vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: 0.6s;
-    z-index: 1;
-    }
+@media (min-width: 768px) and (max-width: 991.98px) {
+   /*navbar properties*/
+   header {
+      position: fixed;
+      width: 100%;
+      height: 6vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: 0.6s;
+      z-index: 1;
+   }
 
-    .ham input{
-        display: none;
-    }
-    .menuig{
-        display: none;
-    }
-    .menufb{
-        display: none;
-    }
+   .ham input {
+      display: none;
+   }
+   .menuig {
+      display: none;
+   }
+   .menufb {
+      display: none;
+   }
 
-    /*when get "sticky" = change color to*/
-    header.sticky{
-        background-color: #fafafa;
-    }
+   /*when get "sticky" = change color to*/
+   header.sticky {
+      background-color: #fafafa;
+   }
 
-    /*Positions and properties of navbar*/
-    header ul{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+   /*Positions and properties of navbar*/
+   header ul {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
 
-    
+   /*Position, size, font, color,etc of navbar options*/
+   header ul li a {
+      display: flex;
+      align-items: center;
+      position: relative;
+      margin: 0 2.5vw;
+      font-size: 2.4vw;
+      text-decoration: none;
+      letter-spacing: 0.2vw;
+      color: #ffffff;
+   }
+   header.sticky ul li a {
+      color: #000000;
+      font-size: 2.4vw;
+   }
 
-    /*Position, size, font, color,etc of navbar options*/
-    header ul li a {
-        display: flex;
-        align-items: center;
-        position: relative;
-        margin: 0 2.5vw;
-        font-size: 2.4vw;
-        text-decoration: none;
-        letter-spacing: .2vw;
-        color: #ffffff;
-    
-    }
-    header.sticky ul li a{
-        color: #000000;
-        font-size: 2.4vw;
-    }
+   /*navbar logo*/
+   header .logo img {
+      width: 7.5vw;
+      height: 7.5vw;
+   }
 
-    
+   /*Hero image, size, position, gradient*/
+   .banner {
+      width: 100%;
+      height: 91vh;
+      background: linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0) 70%,
+            rgb(255, 255, 255) 100%
+         ),
+         url(/imgs/pic1.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 0 50%;
+      position: relative;
+   }
 
-    /*navbar logo*/
-    header .logo img{
-        width: 7.5vw;
-        height: 7.5vw;
-    }
+   /* brand name position, font, size, color*/
+   .name {
+      text-align: center;
+      position: absolute;
+      font-family: "Merriweather";
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 6vh;
+      color: rgb(0, 0, 0);
+   }
 
-    /*Hero image, size, position, gradient*/
-    .banner{
-        width: 100%;
-        height: 91vh;
-        background: linear-gradient(to bottom, rgba(255, 255, 255, 0)70%, rgb(255, 255, 255) 100%), url(/imgs/pic1.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: 0 50%;
-    position: relative;
+   /*text under brand name (position, color, size, font, etc.)*/
+   .slogan {
+      text-align: center;
+      position: absolute;
+      font-family: "Merriweather";
+      top: 87%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 3vh;
+      margin-top: 1vh;
+      color: rgb(0, 0, 0);
+   }
 
-    }
+   /*Just position and size of arrow*/
+   .arrow img {
+      left: 47%;
+      width: 6vw;
+      height: 6vw;
+   }
 
-    /* brand name position, font, size, color*/
-    .name{
-        text-align: center;
-        position: absolute;
-        font-family: "Merriweather";
-        top: 80%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 6vh;
-        color: rgb(0, 0, 0);
-    }
+   /*Text between sections, position, color, size, font of box and text*/
+   .boxes {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin: 2vh auto 6vh auto;
+      line-height: 100px;
+      font-size: 4vw;
+      letter-spacing: 0.3vw;
+      font-family: "Montserrat";
+      font-weight: bold;
+      width: 85%;
+      height: 9vh;
+      text-align: center;
+      background-color: #e4e0db;
+   }
 
-    /*text under brand name (position, color, size, font, etc.)*/
-    .slogan{
-        text-align: center;
-        position: absolute;
-        font-family: "Merriweather";
-        top: 87%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 3vh;
-        margin-top: 1vh;
-        color: rgb(0, 0, 0);
-    }
+   /*Position of collage BOX, size, color,*/
+   .group_images {
+      overflow: hidden;
+      align-items: center;
+      display: flex;
+      position: relative;
+      margin: auto;
+      margin-bottom: 4vh;
+      margin-top: 4vh;
+      width: 85%;
+      height: 80vh;
+      background-color: var(--nude, #e4e0db);
+      justify-content: center;
+   }
 
+   /*Text in the middle of collage box (size, color, position,etc.)*/
+   .gimgsT {
+      display: flex;
+      margin: auto;
+      position: absolute;
+      font-size: 5vh;
+      font-family: "Montserrat";
+      color: #ffffff;
+   }
 
+   /*size, padding, filter, fit Of top left picture*/
+   .column1 img:first-child {
+      height: 35vh;
+      width: 44vw;
+      padding-bottom: 0.5vw;
+      object-fit: cover;
+      object-position: 0 70%;
+      filter: var(--boxS, 75%);
+   }
+   /*size, padding, filter, fit Of bottom left picture*/
+   .column1 img:last-child {
+      width: 44vw;
+      height: 45vh;
+      object-fit: cover;
+      object-position: 0 72%;
+      filter: var(--boxS, 75%);
+   }
 
-    /*Just position and size of arrow*/
-    .arrow img{
-        left: 47%;
-        width: 6vw;
-        height: 6vw;
-    }
+   /*size, padding, filter, fit Of top right picture*/
+   .column2 img:first-child {
+      padding-bottom: 0.5vw;
+      width: 44vw;
+      height: 45vh;
+      object-fit: cover;
+      object-position: 0 62%;
+      filter: var(--boxS, 75%);
+   }
 
-    /*Text between sections, position, color, size, font of box and text*/
-    .boxes{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        margin: 2vh auto 6vh auto;
-        line-height: 100px;
-        font-size: 4vw;
-        letter-spacing: 0.3vw;
-        font-family: "Montserrat";
-        font-weight: bold;
-        width: 85%;
-        height: 9vh;
-        text-align: center;
-        background-color: #E4E0DB;
-    }
+   /*size, padding, filter, fit Of bottom right picture*/
+   .column2 img:last-child {
+      height: 35vh;
+      width: 44vw;
+      object-fit: cover;
+      object-position: 0 66%;
+      filter: var(--boxS);
+   }
 
-    /*Position of collage BOX, size, color,*/
-    .group_images{
-        overflow: hidden;
-        align-items: center;
-        display: flex;
-        position: relative;
-        margin: auto;
-        margin-bottom: 4vh;
-        margin-top: 4vh;
-        width:  85%;
-        height: 80vh;
-        background-color: var(--nude,#E4E0DB);
-        justify-content: center;
-    }
+   /*position and margin, display of designs box*/
+   .designsBox {
+      overflow: hidden;
+      overflow-x: scroll;
+      width: 84%;
+      display: flex;
+      position: relative;
+      margin: 3vh 5vw 6vh 7.75vw;
+   }
 
-    /*Text in the middle of collage box (size, color, position,etc.)*/
-    .gimgsT{
-        display: flex;
-        margin: auto;
-        position: absolute;
-        font-size: 5vh;
-        font-family: "Montserrat";
-        color: #ffffff;
-    }
+   /*position, size, filter of designs box*/
+   .designs img {
+      margin: 0 1vw 0 1vw;
+      height: 54vh;
+      width: 50vw;
+      object-fit: cover;
+      filter: var(--boxS, 75%);
+   }
 
+   /*Text position, size color,etc of designs section*/
+   .designs p {
+      display: flex;
+      position: relative;
+      font-family: "Montserrat";
+      font-size: 6vh;
+      font-weight: 400;
+      color: #ffffff;
+      margin-left: 3vw;
+   }
+   .designTexs {
+      position: absolute;
+      display: flex;
+      flex-flow: column wrap;
+      margin: 0 0 0 1%;
+      top: 70%;
+   }
 
-    /*size, padding, filter, fit Of top left picture*/
-    .column1 img:first-child{
-        height: 35vh;
-        width: 44vw;
-        padding-bottom: 0.5vw;
-        object-fit: cover;
-        object-position: 0 70%;
-        filter: var(--boxS,75%);
-    }
-    /*size, padding, filter, fit Of bottom left picture*/
-    .column1 img:last-child{
-        width: 44vw;
-        height: 45vh;
-        object-fit: cover;
-        object-position: 0 72%;
-        filter:var(--boxS,75%);
-    }
+   /*Color, size, position, etc of colors section */
+   .colorBox {
+      vertical-align: middle;
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+      margin: 0 auto 8vh auto;
+      width: 85%;
+      height: 90vh;
+      background-color: var(--nude, #e4e0db);
+   }
 
-    /*size, padding, filter, fit Of top right picture*/
-    .column2 img:first-child{
-        padding-bottom: 0.5vw;
-        width: 44vw;
-        height: 45vh;
-        object-fit: cover;
-        object-position: 0 62%;
-        filter:var(--boxS,75%);
-    }
+   /*Columns of pictures in a BOX*/
+   .columns {
+      display: flex;
+      flex-wrap: nowrap;
+   }
 
-    /*size, padding, filter, fit Of bottom right picture*/
-    .column2 img:last-child{
-        height: 35vh;
-        width: 44vw;
-        object-fit: cover;
-        object-position: 0 66%;
-        filter:var(--boxS);
-        
-    }
+   /*Size, position, align, etc "Text box"*/
+   .textColorS {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      margin-top: -2%;
+      align-items: center;
+      font-family: "Montserrat";
+   }
 
-    /*position and margin, display of designs box*/
-    .designsBox{
-        overflow: hidden;
-        overflow-x: scroll;
-        width: 84%;
-        display: flex;
-        position: relative;
-        margin: 3vh 5vw 6vh 7.75vw;
-    }
-    
-    /*position, size, filter of designs box*/
-    .designs img{
-        margin: 0 1vw 0 1vw;
-        height: 54vh;
-        width: 50vw;
-        object-fit: cover;
-        filter:var(--boxS,75%);
-    }
-    
-    
-    /*Text position, size color,etc of designs section*/
-    .designs p{
-        display: flex;
-        position: relative;
-        font-family: "Montserrat";
-        font-size: 6vh;
-        font-weight: 400;
-        color: #ffffff;
-        margin-left: 3vw;
-    }
-    .designTexs{
-        position: absolute;
-        display: flex;
-        flex-flow: column wrap;
-        margin: 0 0 0 1%;
-        top: 70%;
-    }
+   /*Size, paddind, Title text*/
+   .cbTtile {
+      letter-spacing: 0.66vw;
+      font-size: 5vw;
+   }
 
-    /*Color, size, position, etc of colors section */
-    .colorBox{
-        vertical-align: middle;
-        display: flex;
-        flex-wrap: wrap;
-        position: relative;
-        margin: 0 auto 8vh auto;
-        width:  85%;
-        height: 90vh;
-        background-color: var(--nude,#E4E0DB);
-    }
+   /*Size, margin, small text*/
+   .cbParag {
+      font-size: 2.2vw;
+   }
 
-    /*Columns of pictures in a BOX*/
-    .columns{
-    display: flex;
-    flex-wrap: nowrap;
-    }
+   .column2imgs {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-start;
+   }
 
-    /*Size, position, align, etc "Text box"*/
-    .textColorS {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-        margin-top: -2%;
-        align-items: center;
-        font-family: "Montserrat";
-        
-    }
+   /*Size, paddind, pic position left side*/
+   .column1imgs img {
+      padding: 4vh 1vw 0 2.8vw;
+      width: 38.5vw;
+      height: 72.3vh;
+      object-fit: cover;
+      object-position: 40% 0%;
+   }
 
-    /*Size, paddind, Title text*/
-    .cbTtile {
-        letter-spacing: .66vw;
-        font-size: 5vw;
-    
-    }
+   /*Size, paddind, pic position right side*/
+   /*this one is focused on both*/
+   .column2imgs img {
+      padding: 4vh 3vw 2vh 0;
+      width: 38.5vw;
+      height: 35.2vh;
+      object-fit: cover;
+      object-position: 0 66%;
+   }
 
-    /*Size, margin, small text*/
-    .cbParag {
-        font-size: 2.2vw;
-    }
+   /*Size, paddind, pic position. bottom right side picture*/
+   /*focused on bottom rigth side*/
+   .column2imgs img:last-child {
+      padding: 0 0 0 0;
+      object-position: 0 50%;
+   }
 
-    .column2imgs{
-        display: flex;
-        flex-wrap: wrap;
-        align-content: flex-start;
-    }
+   /*just display and content of footer "box" */
+   footer {
+      height: 9vh;
+      display: flex;
+      justify-content: space-between;
+   }
 
-    /*Size, paddind, pic position left side*/
-    .column1imgs img{
-        padding: 4vh 1vw 0 2.8vw;
-        width: 38.5vw;
-        height: 72.3vh;
-        object-fit: cover;
-        object-position: 40% 0%;
-    }
+   /*Text align of footer */
+   .footerTextBox {
+      position: relative;
+      text-align: center;
+      align-items: center;
+      margin: 2vh;
+   }
 
-    /*Size, paddind, pic position right side*/
-    /*this one is focused on both*/
-    .column2imgs img{
-        padding: 4vh 3vw 2vh 0;
-        width: 38.5vw;
-        height: 35.2vh;
-        object-fit: cover;
-        object-position: 0 66%;
-    }
+   /*brand name and privacity font size and spacing*/
+   .footerInfo {
+      font-size: 2vh;
+      letter-spacing: 0.3vw;
+      margin: auto;
+   }
 
-    /*Size, paddind, pic position. bottom right side picture*/
-    /*focused on bottom rigth side*/
-    .column2imgs img:last-child{
-        padding: 0 0 0 0;
-        object-position: 0 50%;
-    }
+   /*privacity button font size, border, bacrkground, etc. */
+   .footerInfo button {
+      font-size: 2vh;
+      letter-spacing: 0.1vw;
+      border: none;
+      background-color: inherit;
+      cursor: pointer;
+   }
 
-    /*just display and content of footer "box" */
-    footer{
-    height: 9vh;
-    display: flex;  
-    justify-content: space-between; 
-    }
+   /*Privacity hover color size,etc*/
+   .footerInfo button:hover {
+      font-size: 2vh;
+      letter-spacing: 0.1vw;
+      color: rgb(0, 153, 255);
+   }
 
-    /*Text align of footer */
-    .footerTextBox{
-    position: relative;
-    text-align: center;
-    align-items: center;
-    margin: 2vh;
-    }
+   /*location text size, margin */
+   .location {
+      font-size: 1.5vh;
+      margin: auto;
+      padding-top: 1vh;
+   }
 
-    /*brand name and privacity font size and spacing*/
-    .footerInfo{
-        font-size: 2vh;
-        letter-spacing: .3vw;
-        margin: auto;
-    }
+   /*logo position */
+   .logoft img {
+      display: flex;
+      align-items: center;
+      width: 7.5vw;
+      height: 7.5vw;
+      margin: 0 0 0 5vw;
+      cursor: pointer;
+   }
 
-    /*privacity button font size, border, bacrkground, etc. */
-    .footerInfo button{
-        font-size: 2vh;
-        letter-spacing: 0.1vw;
-        border: none;
-        background-color: inherit;
-        cursor: pointer;
-    }
+   /*socialmedia logos positions */
+   .sclogos {
+      display: flex;
+      letter-spacing: 2vw;
+      font-size: 4vw;
+      cursor: pointer;
+   }
 
-    /*Privacity hover color size,etc*/
-    .footerInfo button:hover{
-        font-size: 2vh;
-        letter-spacing: 0.1vw;
-        color: rgb(0, 153, 255);
-    }
+   /* Modal  */
+   .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.4);
+   }
 
-    /*location text size, margin */
-    .location{
-        font-size: 1.5vh;
-        margin: auto;
-        padding-top: 1vh;
-    }
+   /* Modal Content/Box */
+   .modal-content {
+      background-color: var(--nude, #e4e0db);
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+   }
 
-    /*logo position */
-    .logoft img{
-        display: flex;
-        align-items: center;
-        width: 7.5vw;
-        height: 7.5vw;
-        margin:  0 0 0 5vw; 
-        cursor: pointer;
-    }
+   /* The Close Button */
+   .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+   }
 
-    /*socialmedia logos positions */
-    .sclogos {
-        display: flex;
-        letter-spacing: 2vw;
-        font-size: 4vw;
-        cursor: pointer;
-    }
-
-    /* Modal  */
-    .modal {
-        display: none; 
-        position: fixed; 
-        z-index: 1; 
-        left: 0;
-        top: 0;
-        width: 100%; 
-        height: 100%; 
-        overflow: auto;
-        background-color: rgb(0,0,0); 
-        background-color: rgba(0,0,0,0.4); 
-    }
-    
-    /* Modal Content/Box */
-    .modal-content {
-        background-color: var(--nude,#E4E0DB);
-        margin: 15% auto; 
-        padding: 20px;
-        border: 1px solid #888;
-        width: 80%; 
-    }
-    
-    /* The Close Button */
-    .close {
-        color: #aaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-    }
-    
-    .close:hover,
-    .close:focus {
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
-    } 
+   .close:hover,
+   .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+   }
 }
-
 
 /* Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) { 
-  
-/*navbar properties*/
-header{
-position: fixed;
-width: 100%;
-height: 5vw;
-display: flex;
-justify-content: space-between;
-align-items: center;
-transition: 0.6s;
-z-index: 1;
+@media (min-width: 992px) {
+   /*navbar properties*/
+   header {
+      position: fixed;
+      width: 100%;
+      height: 5vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: 0.6s;
+      z-index: 1;
+   }
+
+   .ham input {
+      display: none;
+   }
+   .menuig {
+      display: none;
+   }
+   .menufb {
+      display: none;
+   }
+
+   /*Positions and properties of navbar*/
+   header ul {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   /*Position, size, font, color,etc of navbar options*/
+   header ul li a {
+      display: flex;
+      align-items: center;
+      position: relative;
+      margin: 0 2.5vw;
+      font-size: 1.8vw;
+      text-decoration: none;
+      letter-spacing: 0.2vw;
+      color: #ffffff;
+   }
+   header.sticky ul li a {
+      color: #000000;
+      font-size: 1.8vw;
+   }
+
+   /*navbar logo*/
+   header .logo img {
+      display: flex;
+      align-items: center;
+      width: 5.5vw;
+      height: 5.5vw;
+      margin: 0 0 0 4vw;
+      cursor: pointer;
+   }
+
+   /*Hero image, size, position, gradient*/
+   .banner {
+      width: 100%;
+      height: 91vh;
+      background: linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0) 70%,
+            rgb(255, 255, 255) 100%
+         ),
+         url(/imgs/pic1.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 0 86%;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      flex-wrap: wrap;
+      flex-direction: row;
+   }
+
+   /* brand name position, font, size, color*/
+   .name {
+      display: flex;
+      text-align: center;
+      position: relative;
+      font-family: "Merriweather";
+      font-size: 6vh;
+      color: rgb(0, 0, 0);
+      padding-bottom: 2vw;
+   }
+
+   /*text under brand name (position, color, size, font, etc.)*/
+   .slogan {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      position: absolute;
+      font-family: "Merriweather";
+      font-size: 3vh;
+      color: rgb(0, 0, 0);
+   }
+
+   /*Just position and size of arrow*/
+   .arrow img {
+      left: 47%;
+      width: 6vw;
+      height: 6vw;
+   }
+
+   /*Text between sections, position, color, size, font of box and text*/
+   .boxes {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin: 2vh auto 6vh auto;
+      line-height: 100px;
+      font-size: 4vw;
+      letter-spacing: 0.3vw;
+      font-family: "Montserrat";
+      font-weight: bold;
+      width: 85%;
+      height: 9vh;
+      text-align: center;
+      background-color: #e4e0db;
+   }
+
+   /*Position of collage BOX, size, color,*/
+   .group_images {
+      overflow: hidden;
+      display: flex;
+      position: relative;
+      margin: auto;
+      margin-bottom: 10vh;
+      margin-top: 6vh;
+      width: 85%;
+      height: 80vh;
+      background-color: var(--nude, #e4e0db);
+   }
+
+   /*Text in the middle of collage box (size, color, position,etc.)*/
+   .gimgsT {
+      top: 50%;
+      left: 22%;
+      position: absolute;
+      font-size: 6vw;
+      font-family: "Montserrat";
+      color: #ffffff;
+      transform: translate(-15%, -50%);
+   }
+
+   /*size, padding, filter, fit Of top left picture*/
+   .column1 img:first-child {
+      height: 34.8vh;
+      width: 43vw;
+      padding-bottom: 0.5vw;
+      object-fit: cover;
+      object-position: 0 70%;
+      filter: var(--boxS, 75%);
+   }
+   /*size, padding, filter, fit Of bottom left picture*/
+   .column1 img:last-child {
+      width: 43vw;
+      height: 44.6vh;
+      object-fit: cover;
+      object-position: 0 72%;
+      filter: var(--boxS, 75%);
+   }
+
+   /*size, padding, filter, fit Of top right picture*/
+   .column2 img:first-child {
+      padding-bottom: 0.5vw;
+      width: 43vw;
+      height: 44.4vh;
+      object-fit: cover;
+      object-position: 0 62%;
+      filter: var(--boxS, 75%);
+   }
+
+   /*size, padding, filter, fit Of bottom right picture*/
+   .column2 img:last-child {
+      height: 35vh;
+      width: 43vw;
+      object-fit: cover;
+      object-position: 0 66%;
+      filter: var(--boxS);
+   }
+
+   /*position and margin, display of designs box*/
+   .designsBox {
+      width: 80%;
+      display: flex;
+      position: relative;
+      margin: auto;
+      margin-bottom: 6vh;
+      padding-top: 3vh;
+      padding-right: 5vw;
+   }
+
+   /*position, size, filter of designs box*/
+   .designs img {
+      margin: 0 1vw 0 1vw;
+      height: 55vh;
+      width: 20.325vw;
+      object-fit: cover;
+      filter: var(--boxS, 75%);
+   }
+
+   .designs img:first-child {
+      margin: 0 1vw 0 0;
+   }
+   /*object-position of last pictue*/
+   .designs img:last-child {
+      object-position: 65% 0%;
+   }
+
+   /*Text position, size color,etc of designs section*/
+   .designs p {
+      display: flex;
+      position: relative;
+      font-family: "Montserrat";
+      font-size: 4.2vh;
+      font-weight: 400;
+      color: #ffffff;
+   }
+   .designTexs {
+      position: absolute;
+      display: flex;
+      flex-flow: column wrap;
+      margin: 0 0 0 1%;
+      top: 70%;
+   }
+
+   /*Color, size, position, etc of colors section */
+   .colorBox {
+      vertical-align: middle;
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+      margin: 0 auto 8vh auto;
+      width: 85%;
+      height: 90vh;
+      background-color: var(--nude, #e4e0db);
+   }
+
+   /*Columns of pictures in a BOX*/
+   .columns {
+      display: flex;
+      flex-wrap: nowrap;
+   }
+
+   /*Size, position, align, etc "Text box"*/
+   .textColorS {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      margin-top: -2%;
+      align-items: center;
+      font-family: "Montserrat";
+   }
+
+   /*Size, paddind, Title text*/
+   .cbTtile {
+      letter-spacing: 0.66vw;
+      font-size: 3vw;
+   }
+
+   /*Size, margin, small text*/
+   .cbParag {
+      font-size: 1.4vw;
+   }
+
+   .column2imgs {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-start;
+   }
+
+   /*Size, paddind, pic position left side*/
+   .column1imgs img {
+      padding: 4vh 1vw 0 2.8vw;
+      width: 38.5vw;
+      height: 72.3vh;
+      object-fit: cover;
+      object-position: center;
+      object-position: 0 55%;
+   }
+
+   /*Size, paddind, pic position right side*/
+   /*this one is focused on both*/
+   .column2imgs img {
+      padding: 4vh 3vw 2vh 0;
+      width: 38.5vw;
+      height: 35.2vh;
+      object-fit: cover;
+      object-position: 0 66%;
+   }
+
+   /*Size, paddind, pic position. bottom right side picture*/
+   /*focused on bottom rigth side*/
+   .column2imgs img:last-child {
+      padding: 0 0 0 0;
+      object-position: 0 68%;
+   }
+
+   /*just display and content of footer "box" */
+   footer {
+      height: 9vh;
+      display: flex;
+      justify-content: space-between;
+   }
+
+   /*Text align of footer */
+   .footerTextBox {
+      position: relative;
+      text-align: center;
+      align-items: center;
+      margin: 2vh;
+   }
+
+   /*brand name and privacity font size and spacing*/
+   .footerInfo {
+      font-size: 2vh;
+      letter-spacing: 0.3vw;
+      margin: auto;
+   }
+
+   /*privacity button font size, border, bacrkground, etc. */
+   .footerInfo button {
+      font-size: 2vh;
+      letter-spacing: 0.1vw;
+      border: none;
+      background-color: inherit;
+      cursor: pointer;
+   }
+
+   /*Privacity hover color size,etc*/
+   .footerInfo button:hover {
+      font-size: 2vh;
+      letter-spacing: 0.1vw;
+      color: rgb(0, 153, 255);
+   }
+
+   /*location text size, margin */
+   .location {
+      font-size: 1.5vh;
+      margin: auto;
+      padding-top: 1vh;
+   }
+
+   /*logo position */
+   .logoft img {
+      display: flex;
+      align-items: center;
+      width: 5.5vw;
+      height: 5.5vw;
+      margin: 0 0 0 5vw;
+      cursor: pointer;
+   }
+
+   /*socialmedia logos positions */
+   .sclogos {
+      display: flex;
+      letter-spacing: 2vw;
+      font-size: 3vw;
+      cursor: pointer;
+   }
+
+   /* Modal  */
+   .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.4);
+   }
+
+   /* Modal Content/Box */
+   .modal-content {
+      background-color: var(--nude, #e4e0db);
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+   }
+
+   /* The Close Button */
+   .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+   }
+
+   .close:hover,
+   .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+   }
 }
 
-.ham input{
-    display: none;
+@media (min-width: 769px) and (max-width: 1400px) {
+   /*Size, paddind, pic position left side*/
+   .column1imgs img {
+      object-position: 43% 55%;
+   }
 }
-.menuig{
-    display: none;
-}
-.menufb{
-    display: none;
-}
-
-
-/*Positions and properties of navbar*/
-header ul{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
-/*Position, size, font, color,etc of navbar options*/
-header ul li a {
-    display: flex;
-    align-items: center;
-    position: relative;
-    margin: 0 2.5vw;
-    font-size: 1.8vw;
-    text-decoration: none;
-    letter-spacing: .2vw;
-    color: #ffffff;
-
-}
-header.sticky ul li a{
-    color: #000000;
-    font-size: 1.8vw;
-}
-
-/*navbar logo*/
-header .logo img{
-    display: flex;
-    align-items: center;
-    width: 5.5vw;
-    height: 5.5vw;
-    margin:  0 0 0 4vw; 
-    cursor: pointer;
-}
-
-/*Hero image, size, position, gradient*/
-.banner{
-    width: 100%;
-    height: 91vh;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0)70%, rgb(255, 255, 255) 100%), url(/imgs/pic1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 0 86%;
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-
-/* brand name position, font, size, color*/
-.name{
-    display: flex;
-    text-align: center;
-    position: relative;
-    font-family: "Merriweather";
-    font-size: 6vh;
-    color: rgb(0, 0, 0);
-    padding-bottom: 2vw;
-}
-
-/*text under brand name (position, color, size, font, etc.)*/
-.slogan{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    position: absolute;
-    font-family: "Merriweather";
-    font-size: 3vh;
-    color: rgb(0, 0, 0);
-}
-
-/*Just position and size of arrow*/
-.arrow img{
-    left: 47%;
-    width: 6vw;
-    height: 6vw;
-}
-
-/*Text between sections, position, color, size, font of box and text*/
-.boxes{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin: 2vh auto 6vh auto;
-    line-height: 100px;
-    font-size: 4vw;
-    letter-spacing: 0.3vw;
-    font-family: "Montserrat";
-    font-weight: bold;
-    width: 85%;
-    height: 9vh;
-    text-align: center;
-    background-color: #E4E0DB;
-}
-
-/*Position of collage BOX, size, color,*/
-.group_images{
-    overflow: hidden;
-    display: flex;
-    position: relative;
-    margin: auto;
-    margin-bottom: 10vh;
-    margin-top: 6vh;
-    width:  85%;
-    height: 80vh;
-    background-color: var(--nude,#E4E0DB);
-}
-
-/*Text in the middle of collage box (size, color, position,etc.)*/
-.gimgsT{
-    top: 50%;
-    left: 22%;
-    position: absolute;
-    font-size: 6vw;
-    font-family: "Montserrat";
-    color: #ffffff;
-    transform: translate(-15%, -50%);
-}
-
-
-
-/*size, padding, filter, fit Of top left picture*/
-.column1 img:first-child{
-    height: 34.8vh;
-    width: 43vw;
-    padding-bottom: 0.5vw;
-    object-fit: cover;
-    object-position: 0 70%;
-    filter: var(--boxS,75%);
-}
-/*size, padding, filter, fit Of bottom left picture*/
-.column1 img:last-child{
-    width: 43vw;
-    height: 44.6vh;
-    object-fit: cover;
-    object-position: 0 72%;
-    filter:var(--boxS,75%);
-}
-
-/*size, padding, filter, fit Of top right picture*/
-.column2 img:first-child{
-    padding-bottom: 0.5vw;
-    width: 43vw;
-    height: 44.4vh;
-    object-fit: cover;
-    object-position: 0 62%;
-    filter:var(--boxS,75%);
-}
-
-/*size, padding, filter, fit Of bottom right picture*/
-.column2 img:last-child{
-    height: 35vh;
-    width: 43vw;
-    object-fit: cover;
-    object-position: 0 66%;
-    filter:var(--boxS);
-    
-}
-
-/*position and margin, display of designs box*/
-.designsBox{
-    width: 80%;
-    display: flex;
-    position: relative;
-    margin: auto;
-    margin-bottom: 6vh;
-    padding-top: 3vh;
-    padding-right: 5vw;
-}
-
-/*position, size, filter of designs box*/
-.designs img{
-    margin: 0 1vw 0 1vw;
-    height: 55vh;
-    width: 20.325vw;
-    object-fit: cover;
-    filter:var(--boxS,75%);
-}
-
-.designs img:first-child{
-    margin: 0 1vw 0 0;
-}
-/*object-position of last pictue*/
-.designs img:last-child{
-    object-position: 65% 0%;
-}
-
-/*Text position, size color,etc of designs section*/
-.designs p{
-    display: flex;
-    position: relative;
-    font-family: "Montserrat";
-    font-size: 4.2vh;
-    font-weight: 400;
-    color: #ffffff;
-}
-.designTexs{
-    position: absolute;
-    display: flex;
-    flex-flow: column wrap;
-    margin: 0 0 0 1%;
-    top: 70%;
-}
-
-/*Color, size, position, etc of colors section */
-.colorBox{
-    vertical-align: middle;
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    margin: 0 auto 8vh auto;
-    width:  85%;
-    height: 90vh;
-    background-color: var(--nude,#E4E0DB);
-}
-
-/*Columns of pictures in a BOX*/
-.columns{
-display: flex;
-flex-wrap: nowrap;
-}
-
-/*Size, position, align, etc "Text box"*/
-.textColorS {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    margin-top: -2%;
-    align-items: center;
-    font-family: "Montserrat";
-    
-}
-
-/*Size, paddind, Title text*/
-.cbTtile {
-    letter-spacing: .66vw;
-    font-size: 3vw;
-
-}
-
-/*Size, margin, small text*/
-.cbParag {
-    font-size: 1.4vw;
-}
-
-.column2imgs{
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
-}
-
-/*Size, paddind, pic position left side*/
-.column1imgs img{
-    padding: 4vh 1vw 0 2.8vw;
-    width: 38.5vw;
-    height: 72.3vh;
-    object-fit: cover;
-    object-position: center;
-    object-position: 0 55%;
-}
-
-/*Size, paddind, pic position right side*/
-/*this one is focused on both*/
-.column2imgs img{
-    padding: 4vh 3vw 2vh 0;
-    width: 38.5vw;
-    height: 35.2vh;
-    object-fit: cover;
-    object-position: 0 66%;
-}
-
-/*Size, paddind, pic position. bottom right side picture*/
-/*focused on bottom rigth side*/
-.column2imgs img:last-child{
-    padding: 0 0 0 0;
-    object-position: 0 68%;
-}
-
-/*just display and content of footer "box" */
-footer{
-height: 9vh;
-display: flex;  
-justify-content: space-between; 
-}
-
-/*Text align of footer */
-.footerTextBox{
-position: relative;
-text-align: center;
-align-items: center;
-margin: 2vh;
-}
-
-/*brand name and privacity font size and spacing*/
-.footerInfo{
-    font-size: 2vh;
-    letter-spacing: .3vw;
-    margin: auto;
-}
-
-/*privacity button font size, border, bacrkground, etc. */
-.footerInfo button{
-    font-size: 2vh;
-    letter-spacing: 0.1vw;
-    border: none;
-    background-color: inherit;
-    cursor: pointer;
-}
-
-/*Privacity hover color size,etc*/
-.footerInfo button:hover{
-    font-size: 2vh;
-    letter-spacing: 0.1vw;
-    color: rgb(0, 153, 255);
-}
-
-/*location text size, margin */
-.location{
-    font-size: 1.5vh;
-    margin: auto;
-    padding-top: 1vh;
-}
-
-/*logo position */
-.logoft img{
-    display: flex;
-    align-items: center;
-    width: 5.5vw;
-    height: 5.5vw;
-    margin:  0 0 0 5vw; 
-    cursor: pointer;
-}
-
-/*socialmedia logos positions */
-.sclogos {
-    display: flex;
-    letter-spacing: 2vw;
-    font-size: 3.0vw;
-    cursor: pointer;
-}
-
-/* Modal  */
-.modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto;
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4); 
-}
-
-/* Modal Content/Box */
-.modal-content {
-    background-color: var(--nude,#E4E0DB);
-    margin: 15% auto; 
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; 
-}
-
-/* The Close Button */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-}
-
-@media (min-width:769px) and (max-width: 1400px){
-    
-
-    /*Size, paddind, pic position left side*/
-    .column1imgs img{
-        object-position: 43% 55%;
-    }
-    
-    }

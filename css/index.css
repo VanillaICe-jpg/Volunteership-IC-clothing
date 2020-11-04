@@ -204,7 +204,7 @@ header .logo img {
             rgba(255, 255, 255, 0) 40%,
             rgb(255, 255, 255) 100%
          ),
-         url(/imgs/pic1.jpg);
+         url(/imgs/banner.jpg);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: 46% 0;
@@ -615,7 +615,7 @@ header .logo img {
             rgba(255, 255, 255, 0) 70%,
             rgb(255, 255, 255) 100%
          ),
-         url(/imgs/pic1.jpg);
+         url(/imgs/banner.jpg);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: 0 50%;
@@ -1012,7 +1012,7 @@ header .logo img {
             rgba(255, 255, 255, 0) 70%,
             rgb(255, 255, 255) 100%
          ),
-         url(/imgs/pic.jpg);
+         url(/imgs/banner.jpg);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: 0 86%;

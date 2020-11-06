@@ -1,0 +1,1075 @@
+/*imported font families*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+
+/*variables*/
+:root {
+   --fC: #000000;
+   --nude: #e4e0db;
+   --boxS: brightness(75%);
+}
+/*Global base properties*/
+* {
+   margin: 0;
+   padding: 0;
+   text-decoration: none;
+   color: var(--fC, #000000);
+   font-family: "Montserrat";
+   /*ERRASE IN DEBUG */
+   /*
+   background: #000 !important;
+   color: #0f0 !important;
+   outline: solid #f00 1px !important;*/
+}
+
+/*background page color  */
+body {
+   background-color: #ffffff;
+   overflow-x: hidden;
+}
+
+header {
+   background-color: #fafafa;
+}
+header ul li {
+   position: relative;
+   list-style: none;
+   padding: auto;
+}
+
+/*navbar logo*/
+header .logo img {
+   display: flex;
+   align-items: center;
+   margin: 0 0 0 4vw;
+   cursor: pointer;
+}
+
+.space {
+   width: 1px;
+   height: 10vw;
+}
+
+.introduc {
+   width: 100vw;
+   height: auto;
+   display: flex;
+   position: relative;
+   text-align: center;
+   font-size: 15px;
+   flex-wrap: nowrap;
+   flex-direction: column;
+   margin-bottom: 4vw;
+   margin-top: 5vw;
+}
+
+h6 {
+   display: flex;
+   position: relative;
+   justify-content: center;
+   text-align: center;
+   font-size: 25px;
+   margin: auto;
+   margin-bottom: 4vw;
+}
+
+h5 {
+   display: flex;
+   position: relative;
+   justify-content: center;
+   text-align: center;
+   font-size: 17px;
+   margin: auto;
+   padding-top: 3vw;
+}
+.introText p {
+   margin: 2vh 4vw 1vh 4vw;
+}
+
+.image {
+   width: 100vw;
+   height: 50vh;
+   display: flex;
+   justify-content: center;
+   align-content: center;
+   align-items: center;
+   background-color: var(--nude, #e4e0db);
+   overflow: hidden;
+   margin-bottom: 3vh;
+}
+
+#ICB {
+   width: 100%;
+   height: 45vh;
+   object-fit: cover;
+   object-position: 00% 00%;
+}
+
+.history {
+   width: 100vw;
+   overflow: hidden;
+   margin: auto;
+   display: flex;
+   text-align: justify;
+   flex-wrap: nowrap;
+   flex-direction: column;
+   align-items: center;
+   margin-top: 5vh;
+   margin-bottom: 5vh;
+   margin: auto;
+}
+
+.introHisto {
+   margin: auto;
+}
+.introHisto p {
+   margin: 2vh 4vw 5vw 4vw;
+}
+
+i {
+   font-size: 6vw;
+}
+.map {
+   width: 99%;
+   height: 40vh;
+   margin-bottom: 5vw;
+}
+/*just display and content of footer "box" */
+footer {
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   position: relative;
+   height: 45w;
+   width: 100vw;
+   align-items: center;
+   justify-content: center;
+}
+
+/*Text align of footer */
+.footerTextBox {
+   position: relative;
+   text-align: center;
+
+   margin-bottom: 2vh;
+}
+
+/*brand name and privacity font size and spacing*/
+.footerInfo {
+   font-size: 2vh;
+   letter-spacing: 0.3vw;
+   margin: auto;
+}
+
+/*privacity button font size, border, bacrkground, etc. */
+.footerInfo button {
+   font-size: 2vh;
+   letter-spacing: 0.1vw;
+   border: none;
+   background-color: inherit;
+   cursor: pointer;
+}
+
+/*Privacity hover color size,etc*/
+.footerInfo button:hover {
+   font-size: 2vh;
+   letter-spacing: 0.1vw;
+   color: rgb(0, 153, 255);
+}
+
+/*location text size, margin */
+.location {
+   font-size: 1.5vh;
+   margin: auto;
+   padding-top: 1vh;
+}
+
+/*logo position */
+.logoft img {
+   padding: 0 0 0 1.5vw;
+   width: 13.5vw;
+   height: 13.5vw;
+   cursor: pointer;
+}
+
+.logoig {
+   padding: 0.4vh 0 0 1vw;
+}
+.sclogos {
+   justify-content: space-between;
+   display: flex;
+   position: relative;
+   order: 2;
+}
+/*socialmedia logos positions */
+.sclogos {
+   display: flex;
+   letter-spacing: 2vw;
+   font-size: 6vw;
+   cursor: pointer;
+   margin: auto;
+   padding: auto;
+   position: relative;
+}
+
+.logoig {
+   margin-top: -0.5vw;
+}
+
+/* Modal  */
+.modal {
+   display: none;
+   position: fixed;
+   z-index: 1;
+   left: 0;
+   top: 0;
+   width: 100vw;
+   height: 100vw;
+   overflow: auto;
+   background-color: rgb(0, 0, 0);
+   background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content/Box */
+.modal-content {
+   background-color: var(--nude, #e4e0db);
+   margin: 15% auto;
+   padding: 20px;
+   border: 1px solid #888;
+   width: 80%;
+}
+
+/* The Close Button */
+.close {
+   color: #aaa;
+   float: right;
+   font-size: 28px;
+   font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+   color: black;
+   text-decoration: none;
+   cursor: pointer;
+}
+
+@media (max-width: 767px) {
+   /*navbar properties*/
+   header {
+      position: fixed;
+      width: 100%;
+      display: flex;
+      transition: 0.6s;
+      z-index: 1;
+   }
+
+   .content {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+   }
+   #menuToggle {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      top: 4.35vw;
+      left: 85vw;
+      z-index: 1;
+      -webkit-user-select: none;
+      user-select: none;
+   }
+
+   #menuToggle input {
+      display: flex;
+      width: 29px;
+      height: 30px;
+      position: absolute;
+      cursor: pointer;
+      opacity: 0;
+      z-index: 2;
+   }
+
+   #menuToggle span {
+      display: flex;
+      width: 29px;
+      height: 2px;
+      margin-bottom: 5px;
+      position: relative;
+      background: #000000;
+      z-index: 1;
+      transform-origin: 5px 0px;
+      transition: transform 0.2s, background 0.2s, opacity 0.2ss;
+   }
+
+   #menuToggle span:first-child {
+      transform-origin: 0% 0%;
+   }
+
+   #menuToggle span:nth-last-child(2) {
+      transform-origin: 0% 100%;
+   }
+
+   #menuToggle input:checked ~ span {
+      opacity: 1;
+      transform: rotate(45deg) translate(-3px, -1px);
+   }
+   #menuToggle input:checked ~ span:nth-last-child(3) {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.2, 0.2);
+   }
+
+   #menuToggle input:checked ~ span:nth-last-child(2) {
+      transform: rotate(-45deg) translate(0, -1px);
+   }
+
+   .textbox {
+      width: 110vw;
+      height: 110vh;
+      background-color: #f5f6fa;
+      transform-origin: 0 0;
+      transform: translate(350%, -11vw);
+      transition: transform 1s;
+   }
+
+   #menuToggle input:checked ~ .textbox {
+      transform: translate(-88vw, -11vw);
+      transition: 0.3s;
+   }
+
+   header ul li {
+      display: flex;
+      justify-content: flex-end;
+      position: relative;
+      vertical-align: st;
+      list-style: none;
+      right: 15vw;
+      top: 30vw;
+      padding: 0 0 10vw 0;
+   }
+
+   /*Position, size, font, color,etc of navbar options*/
+   header ul li a {
+      display: flex;
+      justify-content: flex-end;
+      position: relative;
+      text-align: right;
+      font-size: 7vw;
+      text-decoration: none;
+      letter-spacing: 0.2vw;
+      color: black;
+   }
+
+   .socialhead {
+      display: flex;
+      position: absolute;
+      justify-content: space-between;
+      left: 27vw;
+      font-size: 10vw;
+      letter-spacing: 35vw;
+      height: 10vh;
+      bottom: 15vh;
+   }
+
+   /*navbar logo*/
+   header .logo img {
+      width: 13.5vw;
+      height: 13.5vw;
+   }
+
+   /*just display and content of footer "box" */
+   footer {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      position: relative;
+      height: 45w;
+      width: 100vw;
+      align-items: center;
+      justify-content: center;
+   }
+
+   /*Text align of footer */
+   .footerTextBox {
+      order: 3;
+      position: relative;
+      text-align: center;
+
+      margin-bottom: 2vh;
+   }
+
+   /*brand name and privacity font size and spacing*/
+   .footerInfo {
+      font-size: 2vh;
+      letter-spacing: 0.3vw;
+      margin: auto;
+   }
+
+   /*privacity button font size, border, bacrkground, etc. */
+   .footerInfo button {
+      font-size: 2vh;
+      letter-spacing: 0.1vw;
+      border: none;
+      background-color: inherit;
+      cursor: pointer;
+   }
+
+   /*Privacity hover color size,etc*/
+   .footerInfo button:hover {
+      font-size: 2vh;
+      letter-spacing: 0.1vw;
+      color: rgb(0, 153, 255);
+   }
+
+   /*location text size, margin */
+   .location {
+      font-size: 1.5vh;
+      margin: auto;
+      padding-top: 1vh;
+   }
+
+   .logoBox {
+      order: 1;
+   }
+   /*logo position */
+   .logoft img {
+      padding: 0 0 0 1.5vw;
+      width: 13.5vw;
+      height: 13.5vw;
+      cursor: pointer;
+   }
+
+   .logoig {
+      padding: 0.4vh 0 0 1vw;
+   }
+   .sclogos {
+      justify-content: space-between;
+      display: flex;
+      position: relative;
+      order: 2;
+   }
+   /*socialmedia logos positions */
+   .sclogos {
+      display: flex;
+      letter-spacing: 2vw;
+      font-size: 6vw;
+      cursor: pointer;
+      margin: auto;
+      padding: auto;
+      position: relative;
+   }
+
+   .logoig {
+      margin-top: -0.5vw;
+   }
+
+   /* Modal  */
+   .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.4);
+   }
+
+   /* Modal Content/Box */
+   .modal-content {
+      background-color: var(--nude, #e4e0db);
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+   }
+
+   /* The Close Button */
+   .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+   }
+
+   .close:hover,
+   .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+   }
+}
+
+@media (min-width: 400px) and (max-width: 599px) {
+   #ICB {
+      object-position: 0 50%;
+   }
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+   .introduc {
+      font-size: 1.3rem;
+   }
+
+   .space {
+      height: 10vw;
+   }
+
+   .history {
+      font-size: 1.3rem;
+   }
+
+   .image {
+      height: 85vh;
+   }
+
+   #ICB {
+      height: 70vh;
+      object-position: 0 40%;
+   }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+   /*navbar properties*/
+   header {
+      position: fixed;
+      width: 100%;
+      height: 6vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: 0.6s;
+      z-index: 1;
+      background-color: #fafafa;
+   }
+
+   .ham input {
+      display: none;
+   }
+   .menuig {
+      display: none;
+   }
+   .menufb {
+      display: none;
+   }
+
+   /*when get "sticky" = change color to*/
+   header.sticky {
+      background-color: #fafafa;
+   }
+
+   /*Positions and properties of navbar*/
+   header ul {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   /*Position, size, font, color,etc of navbar options*/
+   header ul li a {
+      display: flex;
+      align-items: center;
+      position: relative;
+      margin: 0 2.5vw;
+      font-size: 2.4vw;
+      text-decoration: none;
+      letter-spacing: 0.2vw;
+      color: #000000;
+   }
+   header.sticky ul li a {
+      color: #000000;
+      font-size: 2.4vw;
+   }
+
+   /*navbar logo*/
+   header .logo img {
+      width: 7.5vw;
+      height: 7.5vw;
+   }
+
+   .space {
+      width: 1px;
+      height: 2vw;
+   }
+
+   .introduc {
+      width: 100vw;
+      height: auto;
+      display: flex;
+      position: relative;
+      text-align: center;
+      font-size: 15px;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      margin-bottom: 4vw;
+      margin-top: 5vw;
+   }
+
+   h6 {
+      display: flex;
+      position: relative;
+      justify-content: center;
+      text-align: center;
+      font-size: 3vw;
+      margin: auto;
+      margin-bottom: 2vw;
+   }
+
+   h5 {
+      display: flex;
+      position: relative;
+      justify-content: center;
+      text-align: center;
+      font-size: 2.2vw;
+      margin: auto;
+   }
+   .introText p {
+      margin: 2vh 4vw 1vh 4vw;
+      font-size: 2vw;
+   }
+
+   .image {
+      width: 100vw;
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      background-color: var(--nude, #e4e0db);
+      overflow: hidden;
+      margin-bottom: 3vh;
+   }
+
+   #ICB {
+      width: 80%;
+      height: 95%;
+      object-fit: cover;
+      object-position: 00% 50%;
+   }
+
+   .history {
+      overflow: hidden;
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+   }
+
+   .introHisto {
+      order: 2;
+      position: relative;
+      margin: auto;
+      display: flex;
+      justify-content: start;
+      align-content: flex-start;
+      margin: auto;
+      margin-left: -10vw;
+      flex-wrap: wrap;
+   }
+
+   .history h6 {
+      order: 1;
+      display: flex;
+      align-content: flex-start;
+      text-align: left;
+      margin: auto;
+      margin-left: 6vw;
+      position: relative;
+      margin-top: 0vw;
+   }
+
+   .introHisto p {
+      position: relative;
+      font-size: 2.2vw;
+      margin: 2vh 4vw 5vw -10vw;
+   }
+
+   i {
+      font-size: 4vw;
+   }
+   .map {
+      order: 3;
+      width: 100%;
+      height: 40vh;
+      margin-bottom: 5vw;
+      margin-right: 3vw;
+   }
+
+   footer {
+      height: 9vh;
+      display: flex;
+      justify-content: space-between;
+   }
+
+   /*Text align of footer */
+   .footerTextBox {
+      position: relative;
+      text-align: center;
+      align-items: center;
+      margin: 2vh;
+   }
+
+   /*brand name and privacity font size and spacing*/
+   .footerInfo {
+      font-size: 2vh;
+      letter-spacing: 0.3vw;
+      margin: auto;
+   }
+
+   /*privacity button font size, border, bacrkground, etc. */
+   .footerInfo button {
+      font-size: 2vh;
+      letter-spacing: 0.1vw;
+      border: none;
+      background-color: inherit;
+      cursor: pointer;
+   }
+
+   /*Privacity hover color size,etc*/
+   .footerInfo button:hover {
+      font-size: 2vh;
+      letter-spacing: 0.1vw;
+      color: rgb(0, 153, 255);
+   }
+
+   /*location text size, margin */
+   .location {
+      font-size: 1.5vh;
+      margin: auto;
+      padding-top: 1vh;
+   }
+
+   /*logo position */
+   .logoft img {
+      display: flex;
+      align-items: center;
+      width: 7.5vw;
+      height: 7.5vw;
+      margin: 0 0 0 5vw;
+      cursor: pointer;
+   }
+
+   /*socialmedia logos positions */
+   .sclogos {
+      display: flex;
+      letter-spacing: 2vw;
+      font-size: 4vw;
+      cursor: pointer;
+   }
+
+   /* Modal  */
+   .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.4);
+   }
+
+   /* Modal Content/Box */
+   .modal-content {
+      background-color: var(--nude, #e4e0db);
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+   }
+
+   /* The Close Button */
+   .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+   }
+
+   .close:hover,
+   .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+   }
+}
+
+@media (min-width: 992px) {
+   /*navbar properties*/
+   header {
+      position: fixed;
+      width: 100%;
+      height: 5vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: 0.6s;
+      z-index: 1;
+      background-color: #fafafa;
+   }
+
+   .ham input {
+      display: none;
+   }
+   .menuig {
+      display: none;
+   }
+   .menufb {
+      display: none;
+   }
+
+   /*Positions and properties of navbar*/
+   header ul {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   /*Position, size, font, color,etc of navbar options*/
+   header ul li a {
+      display: flex;
+      align-items: center;
+      position: relative;
+      margin: 0 2.5vw;
+      font-size: 1.8vw;
+      text-decoration: none;
+      letter-spacing: 0.2vw;
+      color: #000000;
+   }
+   header.sticky ul li a {
+      color: #000000;
+      font-size: 1.8vw;
+   }
+
+   /*navbar logo*/
+   header .logo img {
+      display: flex;
+      align-items: center;
+      width: 5.5vw;
+      height: 5.5vw;
+      margin: 0 0 0 4vw;
+      cursor: pointer;
+   }
+
+   .space {
+      width: 1px;
+      height: 2vw;
+   }
+
+   .introduc {
+      width: 100vw;
+      height: auto;
+      display: flex;
+      position: relative;
+      text-align: center;
+      font-size: 15px;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      margin-bottom: 4vw;
+      margin-top: 5vw;
+   }
+
+   h6 {
+      display: flex;
+      position: relative;
+      justify-content: center;
+      text-align: center;
+      font-size: 2vw;
+      margin: auto;
+   }
+
+   h5 {
+      display: flex;
+      position: relative;
+      justify-content: center;
+      text-align: center;
+      font-size: 1.2vw;
+      margin: auto;
+   }
+   .introText p {
+      font-size: 1vw;
+   }
+
+   .image {
+      width: 100vw;
+      height: 70vh;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      background-color: var(--nude, #e4e0db);
+      overflow: hidden;
+      margin-bottom: 3vh;
+   }
+
+   #ICB {
+      width: 60%;
+      height: 95%;
+      object-fit: cover;
+      object-position: 00% 48%;
+   }
+
+   .history {
+      overflow: hidden;
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10vh;
+      margin-bottom: 5vh;
+   }
+
+   .introHisto {
+      order: 2;
+      position: relative;
+      margin: auto;
+      display: flex;
+      justify-content: start;
+      align-content: flex-start;
+      margin: auto;
+      margin-left: -5vw;
+      margin-top: 6vw;
+      flex-wrap: wrap;
+   }
+
+   .history h6 {
+      order: 1;
+      display: flex;
+      align-content: flex-start;
+      text-align: left;
+      margin: auto;
+      margin-left: 6vw;
+      position: relative;
+      margin-top: 0vw;
+   }
+
+   .introHisto p {
+      position: relative;
+      font-size: 1.6vw;
+      margin: 2vh 4vw 5vw -10vw;
+   }
+
+   i {
+      font-size: 2vw;
+   }
+   .map {
+      order: 3;
+      width: 100%;
+      height: 60vh;
+      margin-bottom: 5vw;
+      margin-right: 3vw;
+   }
+
+   /*just display and content of footer "box" */
+   footer {
+      height: 9vh;
+      display: flex;
+      justify-content: space-between;
+   }
+
+   /*Text align of footer */
+   .footerTextBox {
+      position: relative;
+      text-align: center;
+      align-items: center;
+      margin: 2vh;
+   }
+
+   /*brand name and privacity font size and spacing*/
+   .footerInfo {
+      font-size: 2vh;
+      letter-spacing: 0.3vw;
+      margin: auto;
+   }
+
+   /*privacity button font size, border, bacrkground, etc. */
+   .footerInfo button {
+      font-size: 2vh;
+      letter-spacing: 0.1vw;
+      border: none;
+      background-color: inherit;
+      cursor: pointer;
+   }
+
+   /*Privacity hover color size,etc*/
+   .footerInfo button:hover {
+      font-size: 2vh;
+      letter-spacing: 0.1vw;
+      color: rgb(0, 153, 255);
+   }
+
+   /*location text size, margin */
+   .location {
+      font-size: 1.5vh;
+      margin: auto;
+      padding-top: 1vh;
+   }
+
+   /*logo position */
+   .logoft img {
+      display: flex;
+      align-items: center;
+      width: 5.5vw;
+      height: 5.5vw;
+      margin: 0 0 0 5vw;
+      cursor: pointer;
+   }
+
+   /*socialmedia logos positions */
+   .sclogos {
+      display: flex;
+      letter-spacing: 2vw;
+      font-size: 3vw;
+      cursor: pointer;
+   }
+
+   /* Modal  */
+   .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.4);
+   }
+
+   /* Modal Content/Box */
+   .modal-content {
+      background-color: var(--nude, #e4e0db);
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+   }
+
+   /* The Close Button */
+   .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+   }
+
+   .close:hover,
+   .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+   }
+}

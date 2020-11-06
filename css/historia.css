@@ -28,6 +28,9 @@ body {
    overflow-x: hidden;
 }
 
+header {
+   background-color: #fafafa;
+}
 header ul li {
    position: relative;
    list-style: none;
@@ -42,52 +45,9 @@ header .logo img {
    cursor: pointer;
 }
 
-/*navbar properties*/
-header {
-   position: fixed;
-   width: 100vw;
-   display: flex;
-   transition: 0.6s;
-   z-index: 1;
-   background-color: #fafafa;
-}
-
-header ul li {
-   display: flex;
-   justify-content: flex-end;
-   position: relative;
-   vertical-align: st;
-   list-style: none;
-   right: 15vw;
-}
-
-/*Position, size, font, color,etc of navbar options*/
-header ul li a {
-   display: flex;
-   justify-content: flex-end;
-   position: relative;
-   text-align: right;
-   font-size: 7vw;
-   text-decoration: none;
-   letter-spacing: 0.2vw;
-   color: black;
-}
-
-.socialhead {
-   display: flex;
-   position: absolute;
-   justify-content: space-between;
-   left: 27vw;
-   font-size: 10vw;
-   letter-spacing: 35vw;
-   height: 10vh;
-   bottom: 15vh;
-}
-
-/*navbar logo*/
-header .logo img {
-   width: 15.5vw;
-   height: 15.5vw;
+.space {
+   width: 1px;
+   height: 7vh;
 }
 
 .introduc {
@@ -310,7 +270,6 @@ footer {
    header {
       position: fixed;
       width: 100%;
-      height: auto;
       display: flex;
       transition: 0.6s;
       z-index: 1;
@@ -429,114 +388,29 @@ footer {
       height: 13.5vw;
    }
 
-   .logoBox {
-      order: 1;
-   }
-
-   .footerTextBox {
-      order: 3;
-   }
-}
-
-@media (min-width: 600px) and (max-width: 767px) {
-   .introduc {
-      font-size: 1.3rem;
-   }
-
-   .history {
-      font-size: 1.3rem;
-   }
-
-   #ICB {
-      object-position: 0 60%;
-   }
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-   header {
-      position: fixed;
-      width: 100%;
-      height: 7vw;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-   }
-
-   /*Positions and properties of navbar*/
-   header ul {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: auto;
-      margin-left: 62vw;
-   }
-
-   /*Position, size, font, color,etc of navbar options*/
-   header ul li a {
-      margin: 0 2.5vw;
-      font-size: 2vw;
-      text-decoration: none;
-      letter-spacing: 0.2vw;
-      color: #000000;
-   }
-
-   /*navbar logo*/
-   header .logo img {
-      display: flex;
-      align-items: center;
-      width: 7.5vw;
-      height: 7.5vw;
-      margin: 0 0 0 4vw;
-      cursor: pointer;
-   }
-
-   .ham input {
-      display: none;
-   }
-   .menuig {
-      display: none;
-      font-size: 0px;
-   }
-   .menufb {
-      display: none;
-      font-size: 0px;
-   }
-
-   .introduc {
-      font-size: 1.5rem;
-   }
-
-   .history {
-      font-size: 1.5rem;
-   }
-
-   #ICP {
-      margin-top: 10vw;
-   }
-
-   #ICB {
-      object-fit: cover;
-      object-position: 0% 30%;
-   }
+   /*just display and content of footer "box" */
    footer {
-      height: 9vh;
       display: flex;
-      justify-content: space-between;
       flex-direction: column;
+      flex-wrap: wrap;
+      position: relative;
+      height: 45w;
+      width: 100vw;
+      align-items: center;
+      justify-content: center;
    }
 
    /*Text align of footer */
    .footerTextBox {
+      order: 3;
       position: relative;
       text-align: center;
-      align-items: center;
-      margin: 2vh;
+
+      margin-bottom: 2vh;
    }
 
    /*brand name and privacity font size and spacing*/
    .footerInfo {
-      order: 1;
       font-size: 2vh;
       letter-spacing: 0.3vw;
       margin: auto;
@@ -560,7 +434,288 @@ footer {
 
    /*location text size, margin */
    .location {
+      font-size: 1.5vh;
+      margin: auto;
+      padding-top: 1vh;
+   }
+
+   .logoBox {
+      order: 1;
+   }
+   /*logo position */
+   .logoft img {
+      padding: 0 0 0 1.5vw;
+      width: 13.5vw;
+      height: 13.5vw;
+      cursor: pointer;
+   }
+
+   .logoig {
+      padding: 0.4vh 0 0 1vw;
+   }
+   .sclogos {
+      justify-content: space-between;
+      display: flex;
+      position: relative;
       order: 2;
+   }
+   /*socialmedia logos positions */
+   .sclogos {
+      display: flex;
+      letter-spacing: 2vw;
+      font-size: 6vw;
+      cursor: pointer;
+      margin: auto;
+      padding: auto;
+      position: relative;
+   }
+
+   .logoig {
+      margin-top: -0.5vw;
+   }
+
+   /* Modal  */
+   .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.4);
+   }
+
+   /* Modal Content/Box */
+   .modal-content {
+      background-color: var(--nude, #e4e0db);
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+   }
+
+   /* The Close Button */
+   .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+   }
+
+   .close:hover,
+   .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+   }
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+   .introduc {
+      font-size: 1.3rem;
+      padding-bottom: 2vw;
+   }
+
+   .history {
+      font-size: 1.3rem;
+   }
+
+   #ICB {
+      object-position: 0 60%;
+   }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+   /*navbar properties*/
+   header {
+      position: fixed;
+      width: 100%;
+      height: 6vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: 0.6s;
+      z-index: 1;
+      background-color: #fafafa;
+   }
+
+   .ham input {
+      display: none;
+   }
+   .menuig {
+      display: none;
+   }
+   .menufb {
+      display: none;
+   }
+
+   /*when get "sticky" = change color to*/
+   header.sticky {
+      background-color: #fafafa;
+   }
+
+   /*Positions and properties of navbar*/
+   header ul {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   /*Position, size, font, color,etc of navbar options*/
+   header ul li a {
+      display: flex;
+      align-items: center;
+      position: relative;
+      margin: 0 2.5vw;
+      font-size: 2.4vw;
+      text-decoration: none;
+      letter-spacing: 0.2vw;
+      color: #000000;
+   }
+   header.sticky ul li a {
+      color: #000000;
+      font-size: 2.4vw;
+   }
+
+   /*navbar logo*/
+   header .logo img {
+      width: 7.5vw;
+      height: 7.5vw;
+   }
+
+   .space {
+      width: 1px;
+      height: 7vw;
+   }
+   .introduc {
+      width: 100%;
+      height: 40vw;
+      background-color: var(--nude, #e4e0db);
+      display: flex;
+      position: relative;
+      text-align: center;
+      font-size: 15px;
+      flex-direction: row;
+      align-items: center;
+      align-content: flex-start;
+      justify-content: flex-start;
+   }
+
+   .textboxIntro {
+      margin: auto;
+      height: auto;
+      width: 50%;
+      display: flex;
+      position: relative;
+      text-align: start;
+      font-size: 15px;
+      flex-wrap: nowrap;
+      flex-direction: column;
+   }
+
+   #ICP {
+      width: 30vw;
+      height: 30vw;
+      border-radius: 50%;
+      margin: auto;
+      margin-right: -7vw;
+   }
+
+   h6 {
+      display: flex;
+      position: relative;
+      justify-content: flex-start;
+      font-size: 25px;
+      margin-left: 3.5vw;
+   }
+
+   .introText p {
+      margin: 2vh 4vw 1vh 4vw;
+   }
+
+   .history {
+      width: 100%;
+      height: 40vw;
+      display: flex;
+      position: relative;
+      font-size: 15px;
+      flex-direction: row-reverse;
+      text-align: start;
+      justify-content: start;
+      align-content: flex-start;
+   }
+
+   .hstImg {
+      order: 1;
+      width: 35vw;
+      height: 35vw;
+      border-radius: 10%;
+      margin: auto;
+      margin-left: 8vw;
+   }
+
+   .hisTitle {
+      order: 1;
+      display: flex;
+      position: absolute;
+      align-self: flex-start;
+      margin-top: 7vw;
+      margin-right: 33vw;
+      font-size: 30px;
+   }
+
+   .introHisto p {
+      position: relative;
+      margin-left: 2.5vw;
+   }
+
+   #ICB {
+      object-position: 00% 37%;
+   }
+
+   footer {
+      height: 9vh;
+      display: flex;
+      justify-content: space-between;
+   }
+
+   /*Text align of footer */
+   .footerTextBox {
+      position: relative;
+      text-align: center;
+      align-items: center;
+      margin: 2vh;
+   }
+
+   /*brand name and privacity font size and spacing*/
+   .footerInfo {
+      font-size: 2vh;
+      letter-spacing: 0.3vw;
+      margin: auto;
+   }
+
+   /*privacity button font size, border, bacrkground, etc. */
+   .footerInfo button {
+      font-size: 2vh;
+      letter-spacing: 0.1vw;
+      border: none;
+      background-color: inherit;
+      cursor: pointer;
+   }
+
+   /*Privacity hover color size,etc*/
+   .footerInfo button:hover {
+      font-size: 2vh;
+      letter-spacing: 0.1vw;
+      color: rgb(0, 153, 255);
+   }
+
+   /*location text size, margin */
+   .location {
       font-size: 1.5vh;
       margin: auto;
       padding-top: 1vh;
@@ -568,7 +723,6 @@ footer {
 
    /*logo position */
    .logoft img {
-      order: 3;
       display: flex;
       align-items: center;
       width: 7.5vw;
@@ -584,6 +738,44 @@ footer {
       font-size: 4vw;
       cursor: pointer;
    }
+
+   /* Modal  */
+   .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.4);
+   }
+
+   /* Modal Content/Box */
+   .modal-content {
+      background-color: var(--nude, #e4e0db);
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+   }
+
+   /* The Close Button */
+   .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+   }
+
+   .close:hover,
+   .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+   }
 }
 
 @media (min-width: 992px) {
@@ -597,6 +789,17 @@ footer {
       align-items: center;
       transition: 0.6s;
       z-index: 1;
+      background-color: #fafafa;
+   }
+
+   .ham input {
+      display: none;
+   }
+   .menuig {
+      display: none;
+   }
+   .menufb {
+      display: none;
    }
 
    /*Positions and properties of navbar*/
@@ -616,9 +819,10 @@ footer {
       font-size: 1.8vw;
       text-decoration: none;
       letter-spacing: 0.2vw;
-      color: #ffffff;
+      color: #000000;
    }
    header.sticky ul li a {
+      color: #000000;
       font-size: 1.8vw;
    }
 
@@ -630,6 +834,115 @@ footer {
       height: 5.5vw;
       margin: 0 0 0 4vw;
       cursor: pointer;
+   }
+
+   .space {
+      width: 1px;
+      height: 6vw;
+   }
+   .introduc {
+      width: 100%;
+      height: 35vw;
+      background-color: var(--nude, #e4e0db);
+      display: flex;
+      position: relative;
+      text-align: center;
+      font-size: 1.6vw;
+      flex-direction: row;
+      align-items: center;
+      align-content: flex-start;
+      justify-content: flex-start;
+   }
+
+   .textboxIntro {
+      margin: auto;
+      height: auto;
+      width: 50%;
+      display: flex;
+      position: relative;
+      text-align: start;
+      flex-wrap: nowrap;
+      flex-direction: column;
+   }
+
+   #ICP {
+      width: 25vw;
+      height: 26vw;
+      border-radius: 50%;
+      margin: auto;
+      margin-right: -7vw;
+   }
+
+   h6 {
+      display: flex;
+      position: relative;
+      justify-content: flex-start;
+      font-size: 3vw;
+      margin-left: 3.5vw;
+      margin-bottom: 2vw;
+   }
+
+   .introText p {
+      margin: 2vh 4vw 1vh 4vw;
+   }
+
+   .history {
+      width: 100%;
+      height: 30vw;
+      display: flex;
+      position: relative;
+      flex-direction: row-reverse;
+      text-align: start;
+      font-size: 1.5vw;
+      justify-content: start;
+      align-content: flex-start;
+   }
+
+   .hstImg {
+      order: 1;
+      width: 30vw;
+      height: 30vw;
+      border-radius: 10%;
+      margin: auto;
+      margin-left: 8vw;
+   }
+
+   .hisTitle {
+      order: 1;
+      display: flex;
+      position: absolute;
+      align-self: flex-start;
+      margin-top: 5vw;
+      margin-right: 43vw;
+      font-size: 3vw;
+   }
+
+   .introHisto p {
+      position: relative;
+      margin-left: 2.5vw;
+   }
+
+   #ICB {
+      object-position: 00% 37%;
+   }
+
+   .image {
+      width: 100vw;
+      height: 70vh;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      background-color: var(--nude, #e4e0db);
+      overflow: hidden;
+      margin-bottom: 3vh;
+   }
+
+   #ICB {
+      width: 90vw;
+      height: 65vh;
+      object-fit: cover;
+      object-position: 00% 40%;
    }
 
    /*just display and content of footer "box" */
@@ -672,7 +985,6 @@ footer {
 
    /*location text size, margin */
    .location {
-      order: 2;
       font-size: 1.5vh;
       margin: auto;
       padding-top: 1vh;
@@ -680,7 +992,6 @@ footer {
 
    /*logo position */
    .logoft img {
-      order: 1;
       display: flex;
       align-items: center;
       width: 5.5vw;
@@ -691,14 +1002,47 @@ footer {
 
    /*socialmedia logos positions */
    .sclogos {
-      order: 3;
       display: flex;
       letter-spacing: 2vw;
       font-size: 3vw;
       cursor: pointer;
    }
 
-   .logoig {
-      margin-top: 0.01vh;
+   /* Modal  */
+   .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.4);
+   }
+
+   /* Modal Content/Box */
+   .modal-content {
+      background-color: var(--nude, #e4e0db);
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+   }
+
+   /* The Close Button */
+   .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+   }
+
+   .close:hover,
+   .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
    }
 }

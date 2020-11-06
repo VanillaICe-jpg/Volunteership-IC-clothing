@@ -23,3 +23,7 @@ Updates:
 10/24/2020.- "Finally mobile responsive"
 
 10/24/2020 10:00pm .- "Index completed <3"
+
+11/06/2020 1:27am .-"Well Everything is responsive, but its not to clear for someone that wants to read the code"
+
+11/06/2020 1:27am .- "Maybe it has some bugs, but I'll check it in this days"

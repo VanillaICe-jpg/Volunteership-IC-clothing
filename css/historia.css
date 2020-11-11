@@ -37,6 +37,11 @@ header ul li {
    padding: auto;
 }
 
+.current {
+   text-decoration: underline;
+   text-decoration-color: black;
+}
+
 /*navbar logo*/
 header .logo img {
    display: flex;
@@ -737,6 +742,7 @@ footer {
       letter-spacing: 2vw;
       font-size: 4vw;
       cursor: pointer;
+      bottom: 15%;
    }
 
    /* Modal  */
@@ -960,6 +966,21 @@ footer {
       margin: 2vh;
    }
 
+   /*just display and content of footer "box" */
+   footer {
+      height: 9vh;
+      display: flex;
+      justify-content: space-between;
+   }
+
+   /*Text align of footer */
+   .footerTextBox {
+      position: relative;
+      text-align: center;
+      align-items: center;
+      margin: 2vh;
+   }
+
    /*brand name and privacity font size and spacing*/
    .footerInfo {
       font-size: 2vh;
@@ -1006,6 +1027,10 @@ footer {
       letter-spacing: 2vw;
       font-size: 3vw;
       cursor: pointer;
+      margin-top: 1vw;
+   }
+   .logoig {
+      margin-top: -0.2vw;
    }
 
    /* Modal  */
@@ -1044,5 +1069,49 @@ footer {
       color: black;
       text-decoration: none;
       cursor: pointer;
+   }
+}
+
+@media (min-width: 1000px) and (max-width: 1600px) {
+   .image {
+      width: 100vw;
+      height: 40vh;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      background-color: var(--nude, #e4e0db);
+      overflow: hidden;
+      margin-bottom: 3vh;
+   }
+
+   #ICB {
+      width: 90vw;
+      height: 35vh;
+      object-fit: cover;
+      object-position: 00% 40%;
+   }
+
+   /*logo position */
+   .logoft img {
+      display: flex;
+      align-items: center;
+      width: 5.5vw;
+      height: 5.5vw;
+      margin: 0 0 0 5vw;
+      cursor: pointer;
+      margin-top: 1vw;
+   }
+
+   /*socialmedia logos positions */
+   .sclogos {
+      display: flex;
+      letter-spacing: 2vw;
+      font-size: 3vw;
+      cursor: pointer;
+      margin-top: 2vw;
+   }
+   .logoig {
+      margin-top: -0.6vw;
    }
 }

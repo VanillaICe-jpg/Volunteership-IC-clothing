@@ -3,7 +3,13 @@
 Welcome to my project!
 Full development of a IC clothing web page
 
+![command profile example](/assets/img/OriginalLogo.png)
+
+Figma :https://www.figma.com/file/Vk2euH3N3Jk1SicwulB3qh/IngridCarvClothing?node-id=161%3A2
+
 Include: wireframe,muckups, code, notes, etc.
+
+Interactive muckup : https://www.figma.com/proto/Vk2euH3N3Jk1SicwulB3qh/IngridCarvClothing?page-id=161%3A2&node-id=208%3A117&viewport=241%2C48%2C0.31&scaling=scale-down&starting-point-node-id=208%3A117
 
 You can look for the design procces at "main" branch.
 at master branch you'll find code and images
